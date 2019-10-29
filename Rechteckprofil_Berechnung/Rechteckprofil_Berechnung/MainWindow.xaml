@@ -1,0 +1,43 @@
+﻿<Window x:Class="Rechteckprofil_Berechnung.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Rechteckprofil_Berechnung"
+        mc:Ignorable="d"
+        Title="Der Gerät " Height="450" Width="800">
+    <Grid>
+        <Label Content="Geben Sie bitte folgende Parameter für die Rechtecksprofilberechnung ein!" HorizontalAlignment="Center" Margin="123,10,126,0" VerticalAlignment="Top" Height="31" Width="543" FontSize="16"/>
+        <Label Content="Höhe:" HorizontalAlignment="Left" Margin="78,179,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TxtB_Hoehe" HorizontalAlignment="Left" Height="23" Margin="124,183,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Breite:" HorizontalAlignment="Left" Margin="78,225,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TxtB_Breite" HorizontalAlignment="Left" Height="23" Margin="124,229,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Tiefe:" HorizontalAlignment="Left" Margin="78,273,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TxtB_Tiefe" HorizontalAlignment="Left" Height="23" Margin="124,277,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Dichte:" HorizontalAlignment="Left" Margin="78,314,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TxtB_Dichte"  HorizontalAlignment="Left" Height="23" Margin="124,318,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label Content="[m]" HorizontalAlignment="Left" Margin="258,183,0,0" VerticalAlignment="Top"/>
+        <Label Content="[kg]" HorizontalAlignment="Left" Margin="258,229,0,0" VerticalAlignment="Top"/>
+        <Label Content="[kg]" HorizontalAlignment="Left" Margin="258,277,0,0" VerticalAlignment="Top"/>
+        <Label Content="[kg/m^3]" HorizontalAlignment="Left" Margin="258,318,0,0" VerticalAlignment="Top"/>
+        <Label Content="Querschnittsfläche:" HorizontalAlignment="Left" Margin="425,180,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TxtB_Querschnittsflaeche" HorizontalAlignment="Left" Height="23" Margin="546,183,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Volumen:" HorizontalAlignment="Left" Margin="477,226,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TxtB_Volumen" HorizontalAlignment="Left" Height="23" Margin="546,229,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Gewicht:" HorizontalAlignment="Left" Margin="481,274,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TxtB_Gewicht" HorizontalAlignment="Left" Height="23" Margin="546,277,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Flächenträgheitsmoment:" HorizontalAlignment="Left" Margin="392,315,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TxtB_Flaechentraegkeitsmoment"  HorizontalAlignment="Left" Height="23" Margin="546,318,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label Content="[m²]" HorizontalAlignment="Left" Margin="680,183,0,0" VerticalAlignment="Top"/>
+        <Label Content="[m³]" HorizontalAlignment="Left" Margin="680,229,0,0" VerticalAlignment="Top"/>
+        <Label Content="[kg]" HorizontalAlignment="Left" Margin="680,277,0,0" VerticalAlignment="Top"/>
+        <Label Content="[kg/m³]" HorizontalAlignment="Left" Margin="680,318,0,0" VerticalAlignment="Top"/>
+        <Image Source="" HorizontalAlignment="Left" Height="145" Margin="605,18,0,0" VerticalAlignment="Top" Width="187"/>
+        <Button Content="Berechnen" x:Name="Btn_Berechnen" HorizontalAlignment="Left" Margin="65,376,0,0" VerticalAlignment="Top" Width="250" Click="Btn_Berechnen_Click"/>
+        <Button Content="Reset" x:Name="Btn_Reset" HorizontalAlignment="Left" Margin="467,376,0,0" VerticalAlignment="Top" Width="250" Click="Btn_Reset_Click"/>
+        <Image HorizontalAlignment="Left" Height="78" Margin="10,-14,0,0" VerticalAlignment="Top" Width="253" Source="dergeraet.png" Opacity="2"/>
+
+
+
+    </Grid>
+</Window>
