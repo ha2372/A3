@@ -1,0 +1,7 @@
+Z:\Respority\Profilberechnung\bin\Debug\Profilberechnung.exe.config
+Z:\Respority\Profilberechnung\bin\Debug\Profilberechnung.exe
+Z:\Respority\Profilberechnung\bin\Debug\Profilberechnung.pdb
+Z:\Respority\Profilberechnung\obj\Debug\Profilberechnung.csprojAssemblyReference.cache
+Z:\Respority\Profilberechnung\obj\Debug\Profilberechnung.csproj.CoreCompileInputs.cache
+Z:\Respority\Profilberechnung\obj\Debug\Profilberechnung.exe
+Z:\Respority\Profilberechnung\obj\Debug\Profilberechnung.pdb
