@@ -8,18 +8,18 @@
         Title="Der Gerät " Height="450" Width="800">
     <Grid>
         <Label Content="Geben Sie bitte folgende Parameter für die Rechtecksprofilberechnung ein!" HorizontalAlignment="Center" Margin="123,10,126,0" VerticalAlignment="Top" Height="31" Width="543" FontSize="16"/>
-        <Label Content="Höhe:" HorizontalAlignment="Left" Margin="78,179,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="TxtB_Hoehe" HorizontalAlignment="Left" Height="23" Margin="124,183,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Breite:" HorizontalAlignment="Left" Margin="78,225,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="TxtB_Breite" HorizontalAlignment="Left" Height="23" Margin="124,229,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Tiefe:" HorizontalAlignment="Left" Margin="78,273,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="TxtB_Tiefe" HorizontalAlignment="Left" Height="23" Margin="124,277,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Dichte:" HorizontalAlignment="Left" Margin="78,314,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="TxtB_Dichte"  HorizontalAlignment="Left" Height="23" Margin="124,318,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Label Content="[m]" HorizontalAlignment="Left" Margin="258,183,0,0" VerticalAlignment="Top"/>
-        <Label Content="[kg]" HorizontalAlignment="Left" Margin="258,229,0,0" VerticalAlignment="Top"/>
-        <Label Content="[kg]" HorizontalAlignment="Left" Margin="258,277,0,0" VerticalAlignment="Top"/>
-        <Label Content="[kg/m^3]" HorizontalAlignment="Left" Margin="258,318,0,0" VerticalAlignment="Top"/>
+        <Label Content="Höhe:" HorizontalAlignment="Left" Margin="181,187,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TxtB_Hoehe" HorizontalAlignment="Left" Height="23" Margin="227,190,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Breite:" HorizontalAlignment="Left" Margin="179,232,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TxtB_Breite" HorizontalAlignment="Left" Height="23" Margin="227,232,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Tiefe:" HorizontalAlignment="Left" Margin="184,273,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TxtB_Tiefe" HorizontalAlignment="Left" Height="23" Margin="227,274,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Dichte:" HorizontalAlignment="Left" Margin="175,310,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TxtB_Dichte"  HorizontalAlignment="Left" Height="23" Margin="227,314,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label Content="[m]" HorizontalAlignment="Left" Margin="352,187,0,0" VerticalAlignment="Top" RenderTransformOrigin="3.955,-0.343"/>
+        <Label Content="[kg]" HorizontalAlignment="Left" Margin="352,229,0,0" VerticalAlignment="Top" RenderTransformOrigin="3.2,0.731"/>
+        <Label Content="[kg]" HorizontalAlignment="Left" Margin="352,273,0,0" VerticalAlignment="Top"/>
+        <Label Content="[kg/m³]" HorizontalAlignment="Left" Margin="342,315,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.86,0.615"/>
         <Label Content="Querschnittsfläche:" HorizontalAlignment="Left" Margin="425,180,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="TxtB_Querschnittsflaeche" HorizontalAlignment="Left" Height="23" Margin="546,183,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <Label Content="Volumen:" HorizontalAlignment="Left" Margin="477,226,0,0" VerticalAlignment="Top"/>
@@ -36,6 +36,7 @@
         <Button Content="Berechnen" x:Name="Btn_Berechnen" HorizontalAlignment="Left" Margin="65,376,0,0" VerticalAlignment="Top" Width="250" Click="Btn_Berechnen_Click"/>
         <Button Content="Reset" x:Name="Btn_Reset" HorizontalAlignment="Left" Margin="467,376,0,0" VerticalAlignment="Top" Width="250" Click="Btn_Reset_Click"/>
         <Image HorizontalAlignment="Left" Height="78" Margin="10,-14,0,0" VerticalAlignment="Top" Width="253" Source="dergeraet.png" Opacity="2"/>
+        <TreeView HorizontalAlignment="Left" Height="175" Margin="35,122,0,0" VerticalAlignment="Top" Width="130" RenderTransformOrigin="0.523,0.474"/>
 
 
 
