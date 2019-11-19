@@ -5,3 +5,10 @@ Z:\Respority\Profilberechnung\obj\Debug\Profilberechnung.csprojAssemblyReference
 Z:\Respority\Profilberechnung\obj\Debug\Profilberechnung.csproj.CoreCompileInputs.cache
 Z:\Respority\Profilberechnung\obj\Debug\Profilberechnung.exe
 Z:\Respority\Profilberechnung\obj\Debug\Profilberechnung.pdb
+C:\Users\ha2372\Documents\GitHub\A3\bin\Debug\Profilberechnung.exe.config
+C:\Users\ha2372\Documents\GitHub\A3\bin\Debug\Profilberechnung.exe
+C:\Users\ha2372\Documents\GitHub\A3\bin\Debug\Profilberechnung.pdb
+C:\Users\ha2372\Documents\GitHub\A3\obj\Debug\Profilberechnung.csprojAssemblyReference.cache
+C:\Users\ha2372\Documents\GitHub\A3\obj\Debug\Profilberechnung.csproj.CoreCompileInputs.cache
+C:\Users\ha2372\Documents\GitHub\A3\obj\Debug\Profilberechnung.exe
+C:\Users\ha2372\Documents\GitHub\A3\obj\Debug\Profilberechnung.pdb
