@@ -36,7 +36,10 @@
         <Button Content="Berechnen" x:Name="Btn_Berechnen" HorizontalAlignment="Left" Margin="65,376,0,0" VerticalAlignment="Top" Width="250" Click="Btn_Berechnen_Click"/>
         <Button Content="Reset" x:Name="Btn_Reset" HorizontalAlignment="Left" Margin="467,376,0,0" VerticalAlignment="Top" Width="250" Click="Btn_Reset_Click"/>
         <Image HorizontalAlignment="Left" Height="78" Margin="10,-14,0,0" VerticalAlignment="Top" Width="253" Source="dergeraet.png" Opacity="2"/>
-        <TreeView HorizontalAlignment="Left" Height="175" Margin="35,122,0,0" VerticalAlignment="Top" Width="130" RenderTransformOrigin="0.523,0.474"/>
+        <TreeView HorizontalAlignment="Left" Height="175" Margin="44,128,0,0" VerticalAlignment="Top" Width="130" RenderTransformOrigin="0.442,0.599">
+            <TreeView x:Name="tvi_Profile" Height="70" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.345,0.453"/>
+            <TreeView Height="64" VerticalAlignment="Top" Width="50"/>
+        </TreeView>
 
 
 
