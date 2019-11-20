@@ -76,7 +76,7 @@ namespace Rechteckprofil_Berechnung
         {
 
 
-            return BerechneVolumen() * dichte;
+            return breite * Math.Pow(hoehe,3)/12;
 
         }
 
