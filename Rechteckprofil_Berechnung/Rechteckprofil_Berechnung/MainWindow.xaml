@@ -9,16 +9,16 @@
         MinHeight="450" MinWidth="750">
     <Grid>
         <Label Content="Geben Sie bitte folgende Parameter für die Rechtecksprofilberechnung ein!" HorizontalAlignment="Center" Margin="123,10,126,0" VerticalAlignment="Top" Height="31" Width="543" FontSize="16"/>
-        <Label Content="Höhe:" HorizontalAlignment="Left" Margin="181,187,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Labl_Höhe" Content="Höhe:" HorizontalAlignment="Left" Margin="181,187,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="TxtB_Hoehe" HorizontalAlignment="Left" Height="23" Margin="227,190,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Breite:" HorizontalAlignment="Left" Margin="179,232,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Labl_Breite" Content="Breite:" HorizontalAlignment="Left" Margin="179,232,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="TxtB_Breite" HorizontalAlignment="Left" Height="23" Margin="227,232,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Tiefe:" HorizontalAlignment="Left" Margin="184,273,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Labl_Tiefe" Content="Tiefe:" HorizontalAlignment="Left" Margin="184,273,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="TxtB_Tiefe" HorizontalAlignment="Left" Height="23" Margin="227,274,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Dichte:" HorizontalAlignment="Left" Margin="175,310,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Labl_Dichte" Content="Dichte:" HorizontalAlignment="Left" Margin="175,310,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="TxtB_Dichte"  HorizontalAlignment="Left" Height="23" Margin="227,314,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <Label Content="[m]" HorizontalAlignment="Left" Margin="352,187,0,0" VerticalAlignment="Top" RenderTransformOrigin="3.955,-0.343"/>
-        <Label Content="[m]" HorizontalAlignment="Left" Margin="352,229,0,0" VerticalAlignment="Top" RenderTransformOrigin="3.2,0.731"/>
+        <Label x:Name="Labl_nichtradius" Content="[m]" HorizontalAlignment="Left" Margin="352,229,0,0" VerticalAlignment="Top" RenderTransformOrigin="3.2,0.731"/>
         <Label Content="[m]" HorizontalAlignment="Left" Margin="352,273,0,0" VerticalAlignment="Top"/>
         <Label Content="[kg/m³]" HorizontalAlignment="Left" Margin="342,315,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.86,0.615"/>
         <Label Content="Querschnittsfläche:" HorizontalAlignment="Left" Margin="425,180,0,0" VerticalAlignment="Top"/>
@@ -41,16 +41,18 @@
         <TreeView Margin="10,180,0,0" Width="150" Height="180" HorizontalAlignment="Left" VerticalAlignment="Top"  >
             <TreeViewItem Header="Menu" IsExpanded="True">
                 <TreeViewItem Header="Vollprofile" >
-                    <TreeViewItem x:Name="Rechteck" Header="Rechteck" />
-                    <TreeViewItem x:Name="T_Träger" Header="T Träger" />
-                    <TreeViewItem x:Name="Doppel_T_Träger" Header="Doppel T Träger" />
+                    <TreeViewItem x:Name="Rechteck" Header="Rechteck" Selected="Rechteckprofil" />
+                    <TreeViewItem x:Name="T_Träger" Header="T Träger" Selected="Träger_T" />
+                    <TreeViewItem x:Name="Doppel_T_Träger" Header="Doppel T Träger" Selected="Träger_DT" />
                 </TreeViewItem>
                 <TreeViewItem Header="Kreisprofile">
-                    <TreeViewItem x:Name="Rohrprofil" Header="Rohrprofil"/>
-                    <TreeViewItem x:Name="Rundprofil" Header="Rundprofil"/>
+                    <TreeViewItem x:Name="Rohrprofil" Header="Rohrprofil" Selected="Rohr"/>
+                    <TreeViewItem x:Name="Rundprofil" Header="Rundprofil" Selected="Rundmaterial"/>
                 </TreeViewItem>
             </TreeViewItem>
         </TreeView>
+        <Label x:Name="Labl_Radius" Content="Radius R:" HorizontalAlignment="Left" Margin="164,187,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Labl_Innenradius" Content="Radius r:" HorizontalAlignment="Left" Margin="165,232,0,0" VerticalAlignment="Top"/>
 
 
 
