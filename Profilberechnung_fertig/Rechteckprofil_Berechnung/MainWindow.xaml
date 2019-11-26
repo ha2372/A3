@@ -52,8 +52,8 @@
                 </TreeViewItem>
             </TreeViewItem>
         </TreeView>
-        <Label x:Name="Labl_Radius" Content="Radius R:" HorizontalAlignment="Left" Margin="164,187,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="Labl_Innenradius" Content="Radius r:" HorizontalAlignment="Left" Margin="165,232,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Labl_Radius" Content="Durchm. D:" HorizontalAlignment="Left" Margin="164,187,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Labl_Innenradius" Content="Durchm.d:" HorizontalAlignment="Left" Margin="165,232,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="TxtB_Radius" HorizontalAlignment="Left" Height="23" Margin="227,190,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="TxtB_radius" HorizontalAlignment="Left" Height="23" Margin="227,232,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <Label x:Name="Labl_VierInnen" Content="Innen h:" HorizontalAlignment="Left" Margin="165,232,0,0" VerticalAlignment="Top"/>
