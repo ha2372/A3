@@ -32,7 +32,7 @@
         <Label Content="[m²]" HorizontalAlignment="Left" Margin="680,183,0,0" VerticalAlignment="Top"/>
         <Label Content="[m³]" HorizontalAlignment="Left" Margin="680,229,0,0" VerticalAlignment="Top"/>
         <Label Content="[kg]" HorizontalAlignment="Left" Margin="680,277,0,0" VerticalAlignment="Top"/>
-        <Label Content="[kg/m³]" HorizontalAlignment="Left" Margin="680,318,0,0" VerticalAlignment="Top"/>
+        <Label Content="[m^4]" HorizontalAlignment="Left" Margin="680,318,0,0" VerticalAlignment="Top"/>
         <Button Content="Berechnen" x:Name="Btn_Berechnen" HorizontalAlignment="Left" Margin="65,376,0,0" VerticalAlignment="Top" Width="250" Click="Btn_Berechnen_Click"/>
         <Button Content="Reset" x:Name="Btn_Reset" HorizontalAlignment="Left" Margin="467,376,0,0" VerticalAlignment="Top" Width="250" Click="Btn_Reset_Click"/>
         <Image HorizontalAlignment="Left" Height="78" Margin="10,-14,0,0" VerticalAlignment="Top" Width="253" Source="dergeraet.png" Opacity="2"/>
