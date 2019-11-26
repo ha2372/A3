@@ -41,6 +41,10 @@ namespace Rechteckprofil_Berechnung
             Labl_Innenradius.Visibility = Visibility.Hidden;
             TxtB_Radius.Visibility = Visibility.Hidden;
             TxtB_radius.Visibility = Visibility.Hidden;
+            Labl_VierInnen.Visibility = Visibility.Hidden;
+            TxtB_VierInnen.Visibility = Visibility.Hidden;
+            Labl_VierAussen.Visibility = Visibility.Hidden;
+            TxtB_VierAussen.Visibility = Visibility.Hidden;
         }
         private void InitOberflaeche()
         {
@@ -50,6 +54,8 @@ namespace Rechteckprofil_Berechnung
             TxtB_Tiefe.Text = "";
             TxtB_Radius.Text = "";
             TxtB_radius.Text = "";
+            TxtB_VierAussen.Text = "";
+            TxtB_VierInnen.Text = "";
 
             TxtB_Flaechentraegkeitsmoment.Text = "";
             TxtB_Querschnittsflaeche.Text = "";
@@ -139,35 +145,35 @@ namespace Rechteckprofil_Berechnung
         }
         private void Berechnungen()
         {
-            if (TxtB_Radius.Text == "0" & TxtB_radius.Text == "0")
+            if (TxtB_Radius.Text == "0" & TxtB_radius.Text == "0" & TxtB_VierInnen.Text == "0")
             {
                 TxtB_Querschnittsflaeche.Text = BerechneQuerschnittsflaeche().ToString();
                 TxtB_Volumen.Text = BerechneVolumen().ToString();
                 TxtB_Gewicht.Text = BerechneGewicht().ToString();
                 TxtB_Flaechentraegkeitsmoment.Text = BerechneFlaechentraegheitsmoment().ToString();
             }
-            if (hoehe > 0 & TxtB_Breite.Text == "0")
+            if (hoehe > 0 & TxtB_Breite.Text == "0" & TxtB_VierInnen.Text =="0")
             {
                 TxtB_Querschnittsflaeche.Text = BerechneQuerschnittsflaecheVier().ToString();
                 TxtB_Volumen.Text = BerechneVolumenVier().ToString();
                 TxtB_Gewicht.Text = BerechneGewichtVier().ToString();
                 TxtB_Flaechentraegkeitsmoment.Text = BerechneFlaechentraegheitsmomentVier().ToString();
             }
-            if (vierinnen>0 & vieraussen > 0)
+            if (vierinnen > 0 & vieraussen > 0)
             {
                 TxtB_Querschnittsflaeche.Text = BerechneQuerschnittsflaecheVierRohr().ToString();
                 TxtB_Volumen.Text = BerechneVolumenVierRohr().ToString();
                 TxtB_Gewicht.Text = BerechneGewichtVierRohr().ToString();
                 TxtB_Flaechentraegkeitsmoment.Text = BerechneFlaechentraegheitsmomentVierRohr().ToString();
             }
-            if (TxtB_radius.Text == "0" & TxtB_Hoehe.Text == "0")
+            if (TxtB_radius.Text == "0" & TxtB_Hoehe.Text == "0" & TxtB_VierInnen.Text =="0")
             {
                 TxtB_Querschnittsflaeche.Text = BerechneQuerschnittsflaecheRund().ToString();
                 TxtB_Volumen.Text = BerechneVolumenRund().ToString();
                 TxtB_Gewicht.Text = BerechneGewichtRund().ToString();
                 TxtB_Flaechentraegkeitsmoment.Text = BerechneFlaechentraegheitsmomentRund().ToString();
             }
-            if (TxtB_Hoehe.Text == "0" & radius > 0)
+            if (TxtB_Hoehe.Text == "0" & radius > 0 & TxtB_VierInnen.Text == "0")
             {
                 TxtB_Querschnittsflaeche.Text = BerechneQuerschnittsflaecheRohr().ToString();
                 TxtB_Volumen.Text = BerechneVolumenRohr().ToString();
@@ -370,8 +376,8 @@ namespace Rechteckprofil_Berechnung
             TxtB_Radius.Visibility = Visibility.Hidden;
             Labl_Innenradius.Visibility = Visibility.Hidden;
             TxtB_radius.Visibility = Visibility.Hidden;
-            Labl_Höhe.Visibility = Visibility.Visible;
-            TxtB_Hoehe.Visibility = Visibility.Visible;
+            Labl_Höhe.Visibility = Visibility.Hidden;
+            TxtB_Hoehe.Visibility = Visibility.Hidden;
             Labl_Breite.Visibility = Visibility.Hidden;
             TxtB_Breite.Visibility = Visibility.Hidden;
             Labl_nichtradius.Visibility = Visibility.Visible;
