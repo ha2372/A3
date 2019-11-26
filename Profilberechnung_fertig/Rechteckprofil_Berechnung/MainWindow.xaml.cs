@@ -104,7 +104,7 @@ namespace Rechteckprofil_Berechnung
         }
         private double BerechneFlaechentraegheitsmomentRund()
         {
-            return 3.14 * Radius * 2 * Radius * 2 * Radius * 2 * Radius * 2 / 64;
+            return 3.14 * Radius * Radius * Radius * Radius / 64;
         }
         private double BerechneQuerschnittsflaecheRohr()
         {
@@ -120,7 +120,7 @@ namespace Rechteckprofil_Berechnung
         }
         private double BerechneFlaechentraegheitsmomentRohr()
         {
-            double I = 2 * Radius * 2 * Radius * 2 * Radius * 2 * Radius - 2 * radius * 2 * radius * 2 * radius * 2 * radius;
+            double I = Radius * Radius * Radius * Radius - radius * radius * radius * radius;
             return 3.14 * I / 64;
         }
         private double BerechneQuerschnittsflaecheVier()
