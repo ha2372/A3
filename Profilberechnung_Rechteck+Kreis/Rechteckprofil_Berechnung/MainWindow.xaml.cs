@@ -49,7 +49,8 @@ namespace Rechteckprofil_Berechnung
             TxtB_VierAussen.Visibility = Visibility.Hidden;
         }
 
-        //Profilberechnungen
+        //Alle Felder leeren
+
         private void InitOberflaeche()
         {
             TxtB_Breite.Text = "";
@@ -66,6 +67,9 @@ namespace Rechteckprofil_Berechnung
             TxtB_Gewicht.Text = "";
             TxtB_Volumen.Text = "";
         }
+        // Profilberechnungen
+
+        // Brechnung Rechteckprofil
         private double BerechneQuerschnittsflaeche()
         {
             return breite * hoehe;
@@ -82,6 +86,7 @@ namespace Rechteckprofil_Berechnung
         {
             return breite * Math.Pow(hoehe, 3) / 12;
         }
+        // Berechnung Rundmaterial
         private double BerechneQuerschnittsflaecheRund()
         {
             return 3.14 * Radius * Radius;
@@ -98,6 +103,7 @@ namespace Rechteckprofil_Berechnung
         {
             return 3.14 * Radius * 2 * Radius * 2 * Radius * 2 * Radius * 2 / 64;
         }
+        // Berechnung Rohrprofil
         private double BerechneQuerschnittsflaecheRohr()
         {
             return 3.14 * Radius * Radius - 3.14 * radius * radius;
@@ -115,6 +121,7 @@ namespace Rechteckprofil_Berechnung
             double I = 2 * Radius * 2 * Radius * 2 * Radius * 2 * Radius - 2 * radius * 2 * radius * 2 * radius * 2 * radius;
             return 3.14 * I / 64;
         }
+        // Berechnung Vierkant
         private double BerechneQuerschnittsflaecheVier()
         {
             return hoehe * hoehe;
@@ -131,6 +138,7 @@ namespace Rechteckprofil_Berechnung
         {
             return hoehe * hoehe * hoehe * hoehe / 12;
         }
+        // Berechnung Vierkantrohr
         private double BerechneQuerschnittsflaecheVierRohr()
         {
             return vieraussen * vieraussen - vierinnen * vierinnen;
@@ -147,8 +155,12 @@ namespace Rechteckprofil_Berechnung
         {
             return vieraussen * vieraussen * vieraussen * vieraussen / 12 - vierinnen * vierinnen * vierinnen * vierinnen / 12;
         }
+
+        // Berechnungsauswahl
+
         private void Berechnungen()
         {
+            // Rechteckprofil 
             if (TxtB_Radius.Text == "0" & TxtB_radius.Text == "0" & TxtB_VierInnen.Text == "0")
             {
                 TxtB_Querschnittsflaeche.Text = BerechneQuerschnittsflaeche().ToString();
@@ -156,6 +168,7 @@ namespace Rechteckprofil_Berechnung
                 TxtB_Gewicht.Text = BerechneGewicht().ToString();
                 TxtB_Flaechentraegkeitsmoment.Text = BerechneFlaechentraegheitsmoment().ToString();
             }
+            // Vierkant
             if (hoehe > 0 & TxtB_Breite.Text == "0" & TxtB_VierInnen.Text =="0")
             {
                 TxtB_Querschnittsflaeche.Text = BerechneQuerschnittsflaecheVier().ToString();
@@ -163,6 +176,7 @@ namespace Rechteckprofil_Berechnung
                 TxtB_Gewicht.Text = BerechneGewichtVier().ToString();
                 TxtB_Flaechentraegkeitsmoment.Text = BerechneFlaechentraegheitsmomentVier().ToString();
             }
+            // Vierkantrohr
             if (vierinnen > 0 & vieraussen > 0)
             {
                 TxtB_Querschnittsflaeche.Text = BerechneQuerschnittsflaecheVierRohr().ToString();
@@ -170,6 +184,7 @@ namespace Rechteckprofil_Berechnung
                 TxtB_Gewicht.Text = BerechneGewichtVierRohr().ToString();
                 TxtB_Flaechentraegkeitsmoment.Text = BerechneFlaechentraegheitsmomentVierRohr().ToString();
             }
+            // Rundmaterial
             if (TxtB_radius.Text == "0" & TxtB_Hoehe.Text == "0" & TxtB_VierInnen.Text =="0")
             {
                 TxtB_Querschnittsflaeche.Text = BerechneQuerschnittsflaecheRund().ToString();
@@ -177,6 +192,7 @@ namespace Rechteckprofil_Berechnung
                 TxtB_Gewicht.Text = BerechneGewichtRund().ToString();
                 TxtB_Flaechentraegkeitsmoment.Text = BerechneFlaechentraegheitsmomentRund().ToString();
             }
+            // Rohrprofil
             if (TxtB_Hoehe.Text == "0" & radius > 0 & TxtB_VierInnen.Text == "0")
             {
                 TxtB_Querschnittsflaeche.Text = BerechneQuerschnittsflaecheRohr().ToString();
@@ -185,8 +201,9 @@ namespace Rechteckprofil_Berechnung
                 TxtB_Flaechentraegkeitsmoment.Text = BerechneFlaechentraegheitsmomentRohr().ToString();
             }
         }
+
     // Variablenwert zuweisung
-    // 
+     
 
         private void Btn_Berechnen_Click(object sender, RoutedEventArgs e)
         {
@@ -284,19 +301,19 @@ namespace Rechteckprofil_Berechnung
             TxtB_radius.Text = "";
             TxtB_Radius.Text = "";
         }
-        // Treeview Rundmaterial AUswahl
+        // Treeview Rundmaterial Auswahl
 
         private void Rundmaterial(object sender, RoutedEventArgs e)
         {
             Rundstahl();
         }
-
-        // Textbox initialiesierung Rechteckprofil
+        //Treeview Rehteckprofil Auswahl
+        
         private void Rechteckprofil(object sender, RoutedEventArgs e)
         {
             Rechteckpro();
         }
-        // Treeview Rehteckprofil Auswahl
+        // Textbox initialiesierung Rechteckprofil
         private void Rechteckpro()
         {
             Labl_Radius.Visibility = Visibility.Hidden;
@@ -331,12 +348,12 @@ namespace Rechteckprofil_Berechnung
         }
 
         //Treeview Rohrprofil Auswahl
-        // Textbox initialiesierung Rohrprofil
-       
+        
         private void Rohr(object sender, RoutedEventArgs e)
         {
             Rohrpro();
         }
+        // Textbox initialiesierung Rohrprofil
         private void Rohrpro()
         {
             Labl_Höhe.Visibility = Visibility.Hidden;
@@ -361,12 +378,13 @@ namespace Rechteckprofil_Berechnung
         }
 
         // Treeview Vierkant Auswahl
-        // Textbox initialiesierung Vierkant
+        
 
         private void Vierkant(object sender, RoutedEventArgs e)
         {
             VierkantVier();
         }
+        // Textbox initialiesierung Vierkant
         private void VierkantVier()
         {
             Labl_Radius.Visibility = Visibility.Hidden;
@@ -391,11 +409,12 @@ namespace Rechteckprofil_Berechnung
         }
 
         //Treeview Vierkantrohr Auswahl
-        // Textbox initialiesierung Vierkantrohr
+        
         private void Vierkantrohr(object sender, RoutedEventArgs e)
         {
             VierRohr();
         }
+        // Textbox initialiesierung Vierkantrohr
         private void VierRohr()
         {
             Labl_Radius.Visibility = Visibility.Hidden;
