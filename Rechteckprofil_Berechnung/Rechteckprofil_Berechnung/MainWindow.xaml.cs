@@ -33,6 +33,8 @@ namespace Rechteckprofil_Berechnung
             TxtB_Querschnittsflaeche.IsEnabled = false;
             TxtB_Gewicht.IsEnabled = false;
             TxtB_Volumen.IsEnabled = false;
+            Labl_Radius.Visibility = Visibility.Hidden;
+            Labl_Innenradius.Visibility = Visibility.Hidden;
         }
         private void InitOberflaeche()
         {
@@ -76,7 +78,7 @@ namespace Rechteckprofil_Berechnung
         {
 
 
-            return BerechneVolumen() * dichte;
+            return breite * Math.Pow(hoehe,3)/12;
 
         }
 
@@ -137,6 +139,59 @@ namespace Rechteckprofil_Berechnung
         {
             InitOberflaeche();
 
+        }
+     
+        private void Rundstahl()
+        {
+            Labl_Höhe.Visibility = Visibility.Hidden;
+            Labl_Radius.Visibility = Visibility.Visible;
+            Labl_Innenradius.Visibility = Visibility.Hidden;
+            Labl_Breite.Visibility = Visibility.Hidden;
+            TxtB_Breite.Visibility = Visibility.Hidden;
+            Labl_nichtradius.Visibility = Visibility.Hidden;
+        }
+
+        private void Rundmaterial(object sender, RoutedEventArgs e)
+        {
+            Rundstahl();
+        }
+
+        private void Rechteckprofil(object sender, RoutedEventArgs e)
+        {
+            Rechteckpro();
+        }
+        private void Rechteckpro()
+        {
+            Labl_Radius.Visibility = Visibility.Hidden;
+            Labl_Innenradius.Visibility = Visibility.Hidden;
+            Labl_Höhe.Visibility = Visibility.Visible;
+            Labl_Breite.Visibility = Visibility.Visible;
+            TxtB_Breite.Visibility = Visibility.Visible;
+            Labl_nichtradius.Visibility = Visibility.Visible;
+        }
+
+        private void Träger_T(object sender, RoutedEventArgs e)
+        {
+            Rechteckpro();
+        }
+
+        private void Träger_DT(object sender, RoutedEventArgs e)
+        {
+            Rechteckpro();
+        }
+
+        private void Rohr(object sender, RoutedEventArgs e)
+        {
+            Rohrpro();
+        }
+        private void Rohrpro()
+        {
+            Labl_Höhe.Visibility = Visibility.Hidden;
+            Labl_Breite.Visibility = Visibility.Hidden;
+            Labl_Radius.Visibility = Visibility.Visible;
+            Labl_Innenradius.Visibility = Visibility.Visible;
+            TxtB_Breite.Visibility = Visibility.Visible;
+            Labl_nichtradius.Visibility = Visibility.Visible;
         }
     }
 }
