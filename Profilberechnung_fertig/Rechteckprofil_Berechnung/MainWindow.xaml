@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:Rechteckprofil_Berechnung"
         mc:Ignorable="d"
         Title="Der Gerät " Height="450" Width="800"
-        MinHeight="450" MinWidth="750">
+        MinHeight="450" MinWidth="800"
+        MaxHeight="450" MaxWidth="800">
     <Grid>
         <Label Content="Bitte profil auswählen und Parameter eingeben!" HorizontalAlignment="Center" Margin="123,10,126,0" VerticalAlignment="Top" Height="31" Width="543" FontSize="16"/>
         <Label x:Name="Labl_Höhe" Content="Höhe:" HorizontalAlignment="Left" Margin="181,187,0,0" VerticalAlignment="Top"/>
