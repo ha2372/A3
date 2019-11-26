@@ -18,6 +18,7 @@ namespace Rechteckprofil_Berechnung
     /// <summary>
     /// Interaktionslogik für MainWindow.xaml
     /// </summary>
+    /// Variablen  Zuweisungen
     public partial class MainWindow : Window
     {
         double breite;
@@ -29,6 +30,7 @@ namespace Rechteckprofil_Berechnung
         double vierinnen;
         double vieraussen;
 
+        //Main Window Grundeinstellung
         public MainWindow()
         {
             InitializeComponent();
@@ -46,6 +48,8 @@ namespace Rechteckprofil_Berechnung
             Labl_VierAussen.Visibility = Visibility.Hidden;
             TxtB_VierAussen.Visibility = Visibility.Hidden;
         }
+
+        //Profilberechnungen
         private void InitOberflaeche()
         {
             TxtB_Breite.Text = "";
@@ -181,6 +185,8 @@ namespace Rechteckprofil_Berechnung
                 TxtB_Flaechentraegkeitsmoment.Text = BerechneFlaechentraegheitsmomentRohr().ToString();
             }
         }
+    // Variablenwert zuweisung
+    // 
 
         private void Btn_Berechnen_Click(object sender, RoutedEventArgs e)
         {
@@ -199,6 +205,8 @@ namespace Rechteckprofil_Berechnung
             }
             catch (Exception)
             {
+                // Fehlermeldung bei falscher Eingabe
+
                 var result = MessageBox.Show("Bitte nur Zahlenwerte eingeben!" + Environment.NewLine + "Möchten Sie die Eingaben löschen?", "ALARM!", MessageBoxButton.YesNo, MessageBoxImage.Error);
                 if (result == MessageBoxResult.Yes)
                 {
@@ -207,6 +215,7 @@ namespace Rechteckprofil_Berechnung
             }
 
         }
+        // Nicht gefüllte Felder auf Null setzen
         private void SetzenNichtGefuellteFelderAufNull()
         {
             if (TxtB_Breite.Text == "")
@@ -242,12 +251,17 @@ namespace Rechteckprofil_Berechnung
                 TxtB_VierAussen.Text = "0";
             }
         }
+
+        // Reset/ Felder leeren
         private void Btn_Reset_Click(object sender, RoutedEventArgs e)
         {
             InitOberflaeche();
 
         }
 
+        // Textbox initialiesierung 
+        // Textbox initialiesierung Rundstahl
+        
         private void Rundstahl()
         {
             Labl_Höhe.Visibility = Visibility.Hidden;
@@ -270,15 +284,19 @@ namespace Rechteckprofil_Berechnung
             TxtB_radius.Text = "0";
             TxtB_Radius.Text = "0";
         }
+        // Treeview Rundmaterial AUswahl
 
         private void Rundmaterial(object sender, RoutedEventArgs e)
         {
             Rundstahl();
         }
+
+        // Textbox initialiesierung Rechteckprofil
         private void Rechteckprofil(object sender, RoutedEventArgs e)
         {
             Rechteckpro();
         }
+        // Treeview Rehteckprofil Auswahl
         private void Rechteckpro()
         {
             Labl_Radius.Visibility = Visibility.Hidden;
@@ -312,6 +330,9 @@ namespace Rechteckprofil_Berechnung
             Rechteckpro();
         }
 
+        //Treeview Rohrprofil Auswahl
+        // Textbox initialiesierung Rohrprofil
+       
         private void Rohr(object sender, RoutedEventArgs e)
         {
             Rohrpro();
@@ -338,6 +359,9 @@ namespace Rechteckprofil_Berechnung
             TxtB_Radius.Text = "0";
             TxtB_radius.Text = "0";
         }
+
+        // Treeview Vierkant Auswahl
+        // Textbox initialiesierung Vierkant
 
         private void Vierkant(object sender, RoutedEventArgs e)
         {
@@ -366,6 +390,8 @@ namespace Rechteckprofil_Berechnung
             TxtB_Breite.Text = "0";
         }
 
+        //Treeview Vierkantrohr Auswahl
+        // Textbox initialiesierung Vierkantrohr
         private void Vierkantrohr(object sender, RoutedEventArgs e)
         {
             VierRohr();
