@@ -37,6 +37,8 @@ namespace Rechteckprofil_Berechnung
             TxtB_Volumen.IsEnabled = false;
             Labl_Radius.Visibility = Visibility.Hidden;
             Labl_Innenradius.Visibility = Visibility.Hidden;
+            TxtB_Radius.Visibility = Visibility.Hidden;
+            TxtB_radius.Visibility = Visibility.Hidden;
         }
         private void InitOberflaeche()
         {
@@ -44,44 +46,29 @@ namespace Rechteckprofil_Berechnung
             TxtB_Dichte.Text = "";
             TxtB_Hoehe.Text = "";
             TxtB_Tiefe.Text = "";
+            TxtB_Radius.Text = "";
+            TxtB_radius.Text = "";
 
             TxtB_Flaechentraegkeitsmoment.Text = "";
             TxtB_Querschnittsflaeche.Text = "";
             TxtB_Gewicht.Text = "";
-            TxtB_Volumen.Text = "";
-
-          
-
-
-
+            TxtB_Volumen.Text = "";         
         }
         private double BerechneQuerschnittsflaeche()
-        {
-            
-           
+        {                      
             return breite * hoehe;
-
         }
         private double BerechneVolumen()
         {
-
-
             return BerechneQuerschnittsflaeche() * tiefe;
-
         }
         private double BerechneGewicht()
         {
-
-
             return BerechneVolumen() * dichte;
-
         }
         private double BerechneFlaechentraegheitsmoment()
         {
-
-
             return breite * Math.Pow(hoehe,3)/12;
-
         }
         private double BerechneQuerschnittsflaecheRund()
         {
@@ -101,21 +88,21 @@ namespace Rechteckprofil_Berechnung
         }
         private void Berechnungen()
         {
-            if (hoehe !=0)
+            if (TxtB_Radius.Text == "0" & TxtB_radius.Text == "0")
             {
                 TxtB_Querschnittsflaeche.Text = BerechneQuerschnittsflaeche().ToString();
                 TxtB_Volumen.Text = BerechneVolumen().ToString();
                 TxtB_Gewicht.Text = BerechneGewicht().ToString();
                 TxtB_Flaechentraegkeitsmoment.Text = BerechneFlaechentraegheitsmoment().ToString();
             }
-            if (Radius != 0 & radius==0)
+            if (TxtB_radius.Text == "0" & TxtB_Hoehe.Text == "0")
             {
                 TxtB_Querschnittsflaeche.Text = BerechneQuerschnittsflaecheRund().ToString();
                 TxtB_Volumen.Text = BerechneVolumenRund().ToString();
                 TxtB_Gewicht.Text = BerechneGewichtRund().ToString();
                 TxtB_Flaechentraegkeitsmoment.Text = BerechneFlaechentraegheitsmomentRund().ToString();
             }
-            if (Radius !=0 & radius != 0)
+            if(TxtB_Hoehe.Text == "0" & radius > 0)
             {
                 TxtB_Querschnittsflaeche.Text = BerechneQuerschnittsflaeche().ToString();
                 TxtB_Volumen.Text = BerechneVolumen().ToString();
@@ -133,8 +120,8 @@ namespace Rechteckprofil_Berechnung
                 hoehe = Convert.ToDouble(TxtB_Hoehe.Text.Replace('.', ','));
                 tiefe = Convert.ToDouble(TxtB_Tiefe.Text.Replace('.', ','));
                 dichte = Convert.ToDouble(TxtB_Dichte.Text.Replace('.', ','));
-                Radius = Convert.ToDouble(TxtB_Hoehe.Text.Replace('.', ','));
-                radius = Convert.ToDouble(TxtB_Hoehe.Text.Replace('.', ','));
+                Radius = Convert.ToDouble(TxtB_Radius.Text.Replace('.', ','));
+                radius = Convert.ToDouble(TxtB_radius.Text.Replace('.', ','));
                 Berechnungen();
             }
             catch (Exception )
@@ -165,6 +152,14 @@ namespace Rechteckprofil_Berechnung
             {
                 TxtB_Dichte.Text = "0";
             }
+            if (TxtB_Radius.Text == "")
+            {
+                TxtB_Radius.Text = "0";
+            }
+            if (TxtB_radius.Text == "")
+            {
+                TxtB_radius.Text = "0";
+            }
         }
         private void Btn_Reset_Click(object sender, RoutedEventArgs e)
         {
@@ -175,13 +170,17 @@ namespace Rechteckprofil_Berechnung
         private void Rundstahl()
         {
             Labl_Höhe.Visibility = Visibility.Hidden;
+            TxtB_Hoehe.Visibility = Visibility.Hidden;
             Labl_Radius.Visibility = Visibility.Visible;
+            TxtB_Radius.Visibility = Visibility.Visible;
             Labl_Innenradius.Visibility = Visibility.Hidden;
             TxtB_radius.Visibility = Visibility.Hidden;
             Labl_Breite.Visibility = Visibility.Hidden;
             TxtB_Breite.Visibility = Visibility.Hidden;
             Labl_nichtradius.Visibility = Visibility.Hidden;
-           
+            TxtB_Hoehe.Text = "0";
+            TxtB_Breite.Text = "0";
+            TxtB_radius.Text = "0";
         }
 
         private void Rundmaterial(object sender, RoutedEventArgs e)
@@ -195,11 +194,16 @@ namespace Rechteckprofil_Berechnung
         private void Rechteckpro()
         {
             Labl_Radius.Visibility = Visibility.Hidden;
+            TxtB_Radius.Visibility = Visibility.Hidden;
             Labl_Innenradius.Visibility = Visibility.Hidden;
+            TxtB_radius.Visibility = Visibility.Hidden;
             Labl_Höhe.Visibility = Visibility.Visible;
+            TxtB_Hoehe.Visibility = Visibility.Visible;
             Labl_Breite.Visibility = Visibility.Visible;
             TxtB_Breite.Visibility = Visibility.Visible;
             Labl_nichtradius.Visibility = Visibility.Visible;
+            TxtB_Radius.Text = "0";
+            TxtB_radius.Text = "0";
         }
 
         private void Träger_T(object sender, RoutedEventArgs e)
@@ -219,11 +223,16 @@ namespace Rechteckprofil_Berechnung
         private void Rohrpro()
         {
             Labl_Höhe.Visibility = Visibility.Hidden;
+            TxtB_Hoehe.Visibility = Visibility.Hidden;
             Labl_Breite.Visibility = Visibility.Hidden;
+            TxtB_Breite.Visibility = Visibility.Hidden;
             Labl_Radius.Visibility = Visibility.Visible;
+            TxtB_Radius.Visibility = Visibility.Visible;
             Labl_Innenradius.Visibility = Visibility.Visible;
-            TxtB_Breite.Visibility = Visibility.Visible;
+            TxtB_radius.Visibility = Visibility.Visible;            
             Labl_nichtradius.Visibility = Visibility.Visible;
+            TxtB_Hoehe.Text = "0";
+            TxtB_Breite.Text = "0";
         }
     }
 }
