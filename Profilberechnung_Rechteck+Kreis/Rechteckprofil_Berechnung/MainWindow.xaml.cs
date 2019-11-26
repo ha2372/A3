@@ -263,12 +263,12 @@ namespace Rechteckprofil_Berechnung
             TxtB_VierInnen.Visibility = Visibility.Hidden;
             Labl_VierAussen.Visibility = Visibility.Hidden;
             TxtB_VierAussen.Visibility = Visibility.Hidden;
-            TxtB_VierInnen.Text = "0";
-            TxtB_VierAussen.Text = "0";
-            TxtB_Hoehe.Text = "0";
-            TxtB_Breite.Text = "0";
-            TxtB_radius.Text = "0";
-            TxtB_Radius.Text = "0";
+            TxtB_VierInnen.Text = "";
+            TxtB_VierAussen.Text = "";
+            TxtB_Hoehe.Text = "";
+            TxtB_Breite.Text = "";
+            TxtB_radius.Text = "";
+            TxtB_Radius.Text = "";
         }
 
         private void Rundmaterial(object sender, RoutedEventArgs e)
@@ -294,12 +294,12 @@ namespace Rechteckprofil_Berechnung
             TxtB_VierInnen.Visibility = Visibility.Hidden;
             Labl_VierAussen.Visibility = Visibility.Hidden;
             TxtB_VierAussen.Visibility = Visibility.Hidden;
-            TxtB_VierInnen.Text = "0";
-            TxtB_VierAussen.Text = "0";
-            TxtB_Radius.Text = "0";
-            TxtB_radius.Text = "0";
-            TxtB_Hoehe.Text = "0";
-            TxtB_Breite.Text = "0";
+            TxtB_VierInnen.Text = "";
+            TxtB_VierAussen.Text = "";
+            TxtB_Radius.Text = "";
+            TxtB_radius.Text = "";
+            TxtB_Hoehe.Text = "";
+            TxtB_Breite.Text = "";
         }
 
         private void Träger_T(object sender, RoutedEventArgs e)
@@ -331,12 +331,12 @@ namespace Rechteckprofil_Berechnung
             TxtB_VierInnen.Visibility = Visibility.Hidden;
             Labl_VierAussen.Visibility = Visibility.Hidden;
             TxtB_VierAussen.Visibility = Visibility.Hidden;
-            TxtB_VierInnen.Text = "0";
-            TxtB_VierAussen.Text = "0";
-            TxtB_Hoehe.Text = "0";
-            TxtB_Breite.Text = "0";
-            TxtB_Radius.Text = "0";
-            TxtB_radius.Text = "0";
+            TxtB_VierInnen.Text = "";
+            TxtB_VierAussen.Text = "";
+            TxtB_Hoehe.Text = "";
+            TxtB_Breite.Text = "";
+            TxtB_Radius.Text = "";
+            TxtB_radius.Text = "";
         }
 
         private void Vierkant(object sender, RoutedEventArgs e)
@@ -358,12 +358,12 @@ namespace Rechteckprofil_Berechnung
             TxtB_VierInnen.Visibility = Visibility.Hidden;
             Labl_VierAussen.Visibility = Visibility.Hidden;
             TxtB_VierAussen.Visibility = Visibility.Hidden;
-            TxtB_VierInnen.Text = "0";
-            TxtB_VierAussen.Text = "0";
-            TxtB_Radius.Text = "0";
-            TxtB_radius.Text = "0";
-            TxtB_Hoehe.Text = "0";
-            TxtB_Breite.Text = "0";
+            TxtB_VierInnen.Text = "";
+            TxtB_VierAussen.Text = "";
+            TxtB_Radius.Text = "";
+            TxtB_radius.Text = "";
+            TxtB_Hoehe.Text = "";
+            TxtB_Breite.Text = "";
         }
 
         private void Vierkantrohr(object sender, RoutedEventArgs e)
@@ -385,12 +385,12 @@ namespace Rechteckprofil_Berechnung
             TxtB_VierInnen.Visibility = Visibility.Visible;
             Labl_VierAussen.Visibility = Visibility.Visible;
             TxtB_VierAussen.Visibility = Visibility.Visible;
-            TxtB_VierInnen.Text = "0";
-            TxtB_VierAussen.Text = "0";
-            TxtB_Radius.Text = "0";
-            TxtB_radius.Text = "0";
-            TxtB_Hoehe.Text = "0";
-            TxtB_Breite.Text = "0";
+            TxtB_VierInnen.Text = "";
+            TxtB_VierAussen.Text = "";
+            TxtB_Radius.Text = "";
+            TxtB_radius.Text = "";
+            TxtB_Hoehe.Text = "";
+            TxtB_Breite.Text = "";
         }
     }   
 }
