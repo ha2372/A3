@@ -9,7 +9,7 @@
     <Grid>
         <Button x:Name="Btn_Clear" Content="Clear" HorizontalAlignment="Right" Margin="0,0,50,10" VerticalAlignment="Bottom" Width="100" Height="25" Click="Btn_Clear_Click"/>
         <Button x:Name="Btn_Erstellen" Content="Erstellen" HorizontalAlignment="Right" Margin="0,0,175,10" VerticalAlignment="Bottom" Width="100" Height="25" Click="Btn_Erstellen_Click"/>
-        <Grid x:Name="Grid_Vollprofil_Rechteck" HorizontalAlignment="Right" Height="400" Margin="0,0,50,0" VerticalAlignment="Bottom" Width="700" Visibility="Hidden">
+        <Grid x:Name="Grid_Vollprofil_Rechteck" HorizontalAlignment="Right" Height="400" Margin="0,0,50,50" VerticalAlignment="Bottom" Width="700" Visibility="Hidden">
             <TextBox x:Name="TxtB_hoehe" HorizontalAlignment="Right" Height="25" Margin="0,0,0,275" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
             <TextBox x:Name="TxtB_breite" HorizontalAlignment="Right" Height="25" Margin="0,0,0,225" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
             <TextBox x:Name="TxtB_tiefe" HorizontalAlignment="Right" Height="25" Margin="0,0,0,175" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
@@ -17,7 +17,7 @@
             <Label x:Name="Labl_breite" Content="Breite" HorizontalAlignment="Right" Margin="0,0,110,225" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
             <Label x:Name="Labl_tiefe" Content="Tiefe" HorizontalAlignment="Right" Margin="0,0,110,175" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
             <Image x:Name="Pict_Rechteck_groß" HorizontalAlignment="Left" Height="300" Margin="50,50,0,0" VerticalAlignment="Top" Width="300" Source="Rechteck.PNG"/>
-            <Button x:Name="Btn_Zurück" Content="Zurück" HorizontalAlignment="Right" Margin="0,0,300,10" VerticalAlignment="Bottom" Width="100" Height="25" Click="Btn_Zurück_Click"/>
+            <Button x:Name="Btn_Zurück" Content="Zurück" HorizontalAlignment="Left" Margin="10,0,0,10" VerticalAlignment="Bottom" Width="100" Height="25" Click="Btn_Zurück_Click"/>
         </Grid>
         <Grid x:Name="Grid_Profilauswahl" HorizontalAlignment="Left" Height="350" Margin="50,0,0,50" VerticalAlignment="Bottom" Width="700" Visibility="Visible">
             <Image x:Name="Pict_Rechteck" HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="100" Source="Rechteck.PNG" MouseLeftButtonDown="Pict_Rechteck_MouseLeftButtonDown"/>
@@ -25,15 +25,15 @@
             <Image x:Name="Pict_Rundprofil" HorizontalAlignment="Left" Height="100" Margin="10,150,0,0" VerticalAlignment="Top" Width="100" Source="Rundprofil.PNG" MouseLeftButtonDown="Pict_Rundprofil_MouseLeftButtonDown_1"/>
         </Grid>
         <Grid x:Name="Grid_Profilauswahlr" HorizontalAlignment="Left" Height="350" Margin="50,0,0,50" VerticalAlignment="Bottom" Width="700" Visibility="Visible">
-            
+
         </Grid>
-        <Grid x:Name="Grid_Vollprofil_Rundprofil" HorizontalAlignment="Right" Height="400" Margin="0,0,50,0" VerticalAlignment="Bottom" Width="700" Visibility="Hidden">
+        <Grid x:Name="Grid_Vollprofil_Rundprofil" HorizontalAlignment="Right" Height="400" Margin="0,0,50,50" VerticalAlignment="Bottom" Width="700" Visibility="Hidden">
             <TextBox x:Name="TxtB_radius" HorizontalAlignment="Right" Height="25" Margin="0,0,0,275" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
             <TextBox x:Name="TxtB_tiefer" HorizontalAlignment="Right" Height="25" Margin="0,0,0,175" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
             <Label x:Name="Labl_radius" Content="Radius:" HorizontalAlignment="Right" Margin="0,0,110,275" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
             <Label x:Name="Labl_tiefer" Content="Tiefe" HorizontalAlignment="Right" Margin="0,0,110,175" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
             <Image x:Name="Pict_Rundprofil_groß" HorizontalAlignment="Left" Height="300" Margin="50,50,0,0" VerticalAlignment="Top" Width="300" Source="Rundprofil.PNG"/>
-            <Button x:Name="Btn_Zurückr" Content="Zurück" HorizontalAlignment="Right" Margin="0,0,300,10" VerticalAlignment="Bottom" Width="100" Height="25" Click="Btn_Zurück_Click"/>
+            <Button x:Name="Btn_Zurückr" Content="Zurück" HorizontalAlignment="Left" Margin="10,0,0,10" VerticalAlignment="Bottom" Width="100" Height="25" Click="Btn_Zurück_Click"/>
         </Grid>
     </Grid>
 </Window>
