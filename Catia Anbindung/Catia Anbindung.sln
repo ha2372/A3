@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catia Anbindung", "Catia Anbindung.csproj", "{1FD02DDC-5A25-4835-868F-3E3DEFAF1CCF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1FD02DDC-5A25-4835-868F-3E3DEFAF1CCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FD02DDC-5A25-4835-868F-3E3DEFAF1CCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FD02DDC-5A25-4835-868F-3E3DEFAF1CCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FD02DDC-5A25-4835-868F-3E3DEFAF1CCF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D5DDFBBB-E0BA-4766-9ACE-3ABE8D07A68F}
+	EndGlobalSection
+EndGlobal
