@@ -101,5 +101,20 @@
   <ItemGroup>
     <Resource Include="dergeraet.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Rechteck.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Quadrat.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Quadratrohr.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Rundprofil.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Rohrprofil.PNG" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

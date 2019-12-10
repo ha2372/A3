@@ -59,5 +59,10 @@
         <TextBox x:Name="TxtB_VierInnen" HorizontalAlignment="Left" Height="23" Margin="227,232,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <Label x:Name="Labl_VierAussen" Content="Aussen h:" HorizontalAlignment="Left" Margin="164,187,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="TxtB_VierAussen" HorizontalAlignment="Left" Height="23" Margin="227,190,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Image x:Name="png_Rechteck"  Source="Rechteck.PNG" HorizontalAlignment="Left" Height="124" Margin="618,32,0,0" VerticalAlignment="Top" Width="164"/>
+        <Image x:Name="png_Quadrat" Source="Quadrat.PNG" HorizontalAlignment="Left" Height="133" Margin="607,32,0,0" VerticalAlignment="Top" Width="137"/>
+        <Image x:Name="png_Quadratrohr" Source="Quadratrohr.PNG" HorizontalAlignment="Left" Height="155" Margin="594,32,0,0" VerticalAlignment="Top" Width="167"/>
+        <Image x:Name="png_Rundprofil" Source="Rundprofil.PNG" HorizontalAlignment="Left" Height="115" Margin="618,41,0,0" VerticalAlignment="Top" Width="124"/>
+        <Image x:Name="png_Rohrprofil" Source="Rohrprofil.PNG" HorizontalAlignment="Left" Height="124" Margin="618,32,0,0" VerticalAlignment="Top" Width="152"/>
     </Grid>
 </Window>

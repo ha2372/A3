@@ -47,6 +47,14 @@ namespace Rechteckprofil_Berechnung
             TxtB_VierInnen.Visibility = Visibility.Hidden;
             Labl_VierAussen.Visibility = Visibility.Hidden;
             TxtB_VierAussen.Visibility = Visibility.Hidden;
+            png_Rechteck.Visibility = Visibility.Hidden;
+            png_Quadrat.Visibility = Visibility.Hidden;
+            png_Quadratrohr.Visibility = Visibility.Hidden;
+            png_Rohrprofil.Visibility = Visibility.Hidden;
+            png_Rundprofil.Visibility = Visibility.Hidden;
+
+          
+
         }
 
         //Profilberechnungen
@@ -283,6 +291,11 @@ namespace Rechteckprofil_Berechnung
             TxtB_Breite.Text = "";
             TxtB_radius.Text = "";
             TxtB_Radius.Text = "";
+            png_Rechteck.Visibility = Visibility.Hidden;
+            png_Quadrat.Visibility = Visibility.Hidden;
+            png_Quadratrohr.Visibility = Visibility.Hidden;
+            png_Rohrprofil.Visibility = Visibility.Hidden;
+            png_Rundprofil.Visibility = Visibility.Visible;
         }
         // Treeview Rundmaterial AUswahl
 
@@ -318,6 +331,12 @@ namespace Rechteckprofil_Berechnung
             TxtB_radius.Text = "";
             TxtB_Hoehe.Text = "";
             TxtB_Breite.Text = "";
+            png_Rechteck.Visibility = Visibility.Visible;
+            png_Quadrat.Visibility = Visibility.Hidden;
+            png_Quadratrohr.Visibility = Visibility.Hidden;
+            png_Rohrprofil.Visibility = Visibility.Hidden;
+            png_Rundprofil.Visibility = Visibility.Hidden;
+
         }
 
         private void Träger_T(object sender, RoutedEventArgs e)
@@ -358,6 +377,11 @@ namespace Rechteckprofil_Berechnung
             TxtB_Breite.Text = "";
             TxtB_Radius.Text = "";
             TxtB_radius.Text = "";
+            png_Rechteck.Visibility = Visibility.Hidden;
+            png_Quadrat.Visibility = Visibility.Hidden;
+            png_Quadratrohr.Visibility = Visibility.Hidden;
+            png_Rohrprofil.Visibility = Visibility.Visible;
+            png_Rundprofil.Visibility = Visibility.Hidden;
         }
 
         // Treeview Vierkant Auswahl
@@ -388,6 +412,11 @@ namespace Rechteckprofil_Berechnung
             TxtB_radius.Text = "";
             TxtB_Hoehe.Text = "";
             TxtB_Breite.Text = "";
+            png_Rechteck.Visibility = Visibility.Hidden;
+            png_Quadrat.Visibility = Visibility.Visible;
+            png_Quadratrohr.Visibility = Visibility.Hidden;
+            png_Rohrprofil.Visibility = Visibility.Hidden;
+            png_Rundprofil.Visibility = Visibility.Hidden;
         }
 
         //Treeview Vierkantrohr Auswahl
@@ -417,6 +446,11 @@ namespace Rechteckprofil_Berechnung
             TxtB_radius.Text = "";
             TxtB_Hoehe.Text = "";
             TxtB_Breite.Text = "";
+            png_Rechteck.Visibility = Visibility.Hidden;
+            png_Quadrat.Visibility = Visibility.Hidden;
+            png_Quadratrohr.Visibility = Visibility.Visible;
+            png_Rohrprofil.Visibility = Visibility.Hidden;
+            png_Rundprofil.Visibility = Visibility.Hidden;
         }
     }   
 }
