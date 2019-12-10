@@ -111,8 +111,5 @@
   <ItemGroup>
     <Resource Include="Rechteck.PNG" />
   </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Rundprofil.PNG" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
