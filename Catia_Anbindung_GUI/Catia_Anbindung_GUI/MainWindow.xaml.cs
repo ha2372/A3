@@ -76,8 +76,6 @@ namespace Catia_Anbindung_GUI
         private void Rechteckauswahl()
         {
             Grid_Profilauswahl.Visibility = Visibility.Hidden;
-            Pict_Rechteck_groß.Visibility = Visibility.Visible;
-            Btn_Zurück.Visibility = Visibility.Visible;
             Grid_Vollprofil_Rechteck.Visibility = Visibility.Visible;
         }
 
@@ -88,23 +86,20 @@ namespace Catia_Anbindung_GUI
 
         private void Profilauswahl()
         {
-            Pict_Rechteck_groß.Visibility = Visibility.Hidden;
             Grid_Profilauswahl.Visibility = Visibility.Visible;
-            Btn_Zurück.Visibility = Visibility.Hidden;
+            Grid_Vollprofil_Rundprofil.Visibility = Visibility.Hidden;
             Grid_Vollprofil_Rechteck.Visibility = Visibility.Hidden;
-        }
-
-        private void Pict_Rundprofil_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            Rundprofilauswahl();
         }
 
         private void Rundprofilauswahl()
         {
             Grid_Profilauswahl.Visibility = Visibility.Hidden;
-            Pict_Rechteck_groß.Visibility = Visibility.Visible;
-            Btn_Zurück.Visibility = Visibility.Visible;
-            Grid_Vollprofil_Rechteck.Visibility = Visibility.Visible;
+            Grid_Vollprofil_Rundprofil.Visibility = Visibility.Visible;
+        }
+
+        private void Pict_Rundprofil_MouseLeftButtonDown_1(object sender, MouseButtonEventArgs e)
+        {
+            Rundprofilauswahl();
         }
     }    
 }
