@@ -86,7 +86,20 @@ namespace Catia_Anbindung_GUI
             };
             hsp_catiaProfil.SetAbsoluteAxisData(arr);
         }
-        public void ErzeugeProfil(Double h, Double b)
+
+        public void ErzeugeKreis(Double r)
+        {
+            hsp_catiaProfil.set_Name("Kreis");
+            Factory2D catFactory2D1 = hsp_catiaProfil.OpenEdition();
+
+            Point2D catPoint2D1 = catFactory2D1.CreatePoint(0,0);
+            Circle2D catcircle2D1 = catFactory2D1.CreateClosedCircle(0.000000, 0.000000,r);
+            catcircle2D1.CenterPoint = catPoint2D1;
+
+            hsp_catiaProfil.CloseEdition();
+            hsp_catiaPart.Part.Update();
+        }
+        public void ErzeugeRechteck(Double h, Double b)
         {
             hsp_catiaProfil.set_Name("Rechteck");
             Factory2D catFactory2D1 = hsp_catiaProfil.OpenEdition();
@@ -113,6 +126,18 @@ namespace Catia_Anbindung_GUI
             catLine2D4.EndPoint = catPoint2D1;
 
             hsp_catiaProfil.CloseEdition();
+            hsp_catiaPart.Part.Update();
+        }
+
+        public void ErzeugeStab(Double tr)
+        {
+            hsp_catiaPart.Part.InWorkObject = hsp_catiaPart.Part.MainBody;
+
+            ShapeFactory catShapeFactory1 = (ShapeFactory)hsp_catiaPart.Part.ShapeFactory;
+            Pad catPad1 = catShapeFactory1.AddNewPad(hsp_catiaProfil, tr);
+
+            catPad1.set_Name("Stab");
+
             hsp_catiaPart.Part.Update();
         }
         public void ErzeugeBalken(Double t)

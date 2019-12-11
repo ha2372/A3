@@ -22,7 +22,9 @@ namespace Catia_Anbindung_GUI
     {
         public MainWindow()
         {
-            InitializeComponent();           
+            InitializeComponent();
+            bool re;
+            bool ru;           
         }
 
         private void Btn_Clear_Click(object sender, RoutedEventArgs e)
@@ -32,11 +34,24 @@ namespace Catia_Anbindung_GUI
 
         private void Felderleeren()
         {
-            TxtB_hoehe.Text = "";
-            TxtB_breite.Text = "";
-            TxtB_tiefe.Text = "";
+            TxtB_hoehe.Text = "0";
+            TxtB_breite.Text = "0";
+            TxtB_tiefe.Text = "0";
+            TxtB_tiefer.Text = "0";
+            TxtB_radius.Text = "0";
         }
 
+        private void FelderleerenKreis()
+        {            
+            TxtB_tiefer.Text = "0";
+            TxtB_radius.Text = "0";
+        }
+        private void FelderleerenRechteck()
+        {
+            TxtB_hoehe.Text = "0";
+            TxtB_breite.Text = "0";
+            TxtB_tiefe.Text = "0";
+        }
         private void Btn_Erstellen_Click(object sender, RoutedEventArgs e)
         {
             Erstellen();
@@ -52,10 +67,22 @@ namespace Catia_Anbindung_GUI
                     double h = Convert.ToDouble(TxtB_hoehe.Text);
                     double b = Convert.ToDouble(TxtB_breite.Text);
                     double t = Convert.ToDouble(TxtB_tiefe.Text);
+                    double tr = Convert.ToDouble(TxtB_tiefer.Text);
+                    double r = Convert.ToDouble(TxtB_radius.Text);
+                    int eins = Convert.ToInt32(TxtB_hoehe.Text);
+                    int zwei = Convert.ToInt32(TxtB_radius.Text);
                     cc.ErzeugePart();
                     cc.ErstelleLeereSkizze();                   
-                    cc.ErzeugeProfil(b,h);
-                    cc.ErzeugeBalken(t);
+                    if (eins > 0 & zwei == 0)
+                    {
+                        cc.ErzeugeRechteck(b, h);
+                        cc.ErzeugeBalken(t);
+                    }
+                    if (zwei > 0 & eins == 0)
+                    {
+                        cc.ErzeugeKreis(r);
+                        cc.ErzeugeStab(tr);
+                    }
                 }
                 else
                 {
@@ -73,10 +100,11 @@ namespace Catia_Anbindung_GUI
             Rechteckauswahl();
         }
 
-        private void Rechteckauswahl()
+        public void Rechteckauswahl()
         {
+            FelderleerenKreis();
             Grid_Profilauswahl.Visibility = Visibility.Hidden;
-            Grid_Vollprofil_Rechteck.Visibility = Visibility.Visible;
+            Grid_Vollprofil_Rechteck.Visibility = Visibility.Visible;          
         }
 
         private void Btn_Zurück_Click(object sender, RoutedEventArgs e)
@@ -91,8 +119,9 @@ namespace Catia_Anbindung_GUI
             Grid_Vollprofil_Rechteck.Visibility = Visibility.Hidden;
         }
 
-        private void Rundprofilauswahl()
+        public void Rundprofilauswahl()
         {
+            FelderleerenRechteck();
             Grid_Profilauswahl.Visibility = Visibility.Hidden;
             Grid_Vollprofil_Rundprofil.Visibility = Visibility.Visible;
         }
