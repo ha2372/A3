@@ -99,6 +99,21 @@ namespace Catia_Anbindung_GUI
             hsp_catiaProfil.CloseEdition();
             hsp_catiaPart.Part.Update();
         }
+
+        public void ErzeugeKreisring(Double ra, Double ri)
+        {
+            hsp_catiaProfil.set_Name("Kreisring");
+            Factory2D catFactory2D1 = hsp_catiaProfil.OpenEdition();
+
+            Point2D catPoint2D1 = catFactory2D1.CreatePoint(0, 0);
+            Circle2D catcircle2D1 = catFactory2D1.CreateClosedCircle(0.000000, 0.000000, ra);
+            Circle2D catcircle2D2 = catFactory2D1.CreateClosedCircle(0.000000, 0.000000, ri);
+            catcircle2D1.CenterPoint = catPoint2D1;
+
+            hsp_catiaProfil.CloseEdition();
+            hsp_catiaPart.Part.Update();
+        }
+
         public void ErzeugeRechteck(Double h, Double b)
         {
             hsp_catiaProfil.set_Name("Rechteck");
@@ -129,6 +144,69 @@ namespace Catia_Anbindung_GUI
             hsp_catiaPart.Part.Update();
         }
 
+        public void ErzeugeRechteckRohr(Double r_ah, Double r_ih,Double r_ab,Double r_ib)
+        {
+            hsp_catiaProfil.set_Name("RechteckRohr");
+            Factory2D catFactory2D1 = hsp_catiaProfil.OpenEdition();
+
+            Point2D catPoint2D1 = catFactory2D1.CreatePoint(0, r_ah);
+            Point2D catPoint2D2 = catFactory2D1.CreatePoint(r_ab, r_ah);
+            Point2D catPoint2D3 = catFactory2D1.CreatePoint(r_ab, 0);
+            Point2D catPoint2D4 = catFactory2D1.CreatePoint(0, 0);
+
+            Point2D catPoint2D5 = catFactory2D1.CreatePoint((r_ab-r_ib)/2, r_ih+(r_ah-r_ih)/2);
+            Point2D catPoint2D6 = catFactory2D1.CreatePoint(r_ib+(r_ab-r_ib)/2, r_ih+(r_ah-r_ih)/2);
+            Point2D catPoint2D7 = catFactory2D1.CreatePoint(r_ib+ (r_ab - r_ib) / 2, (r_ah-r_ih)/2);
+            Point2D catPoint2D8 = catFactory2D1.CreatePoint((r_ab-r_ib)/2, (r_ah-r_ih)/2);
+
+            Line2D catLine2D1 = catFactory2D1.CreateLine(0, r_ah, r_ab, r_ah);
+            catLine2D1.StartPoint = catPoint2D1;
+            catLine2D1.EndPoint = catPoint2D2;
+
+            Line2D catLine2D2 = catFactory2D1.CreateLine(r_ab, r_ah, r_ab, 0);
+            catLine2D2.StartPoint = catPoint2D2;
+            catLine2D2.EndPoint = catPoint2D3;
+
+            Line2D catLine2D3 = catFactory2D1.CreateLine(r_ab, 0, 0, 0);
+            catLine2D3.StartPoint = catPoint2D3;
+            catLine2D3.EndPoint = catPoint2D4;
+
+            Line2D catLine2D4 = catFactory2D1.CreateLine(0, 0, 0, r_ah);
+            catLine2D4.StartPoint = catPoint2D4;
+            catLine2D4.EndPoint = catPoint2D1;
+
+            Line2D catLine2D5 = catFactory2D1.CreateLine((r_ab-r_ib)/2, r_ih+(r_ah-r_ih)/2, r_ib+(r_ab-r_ib)/2, r_ih+(r_ah-r_ih)/2);
+            catLine2D5.StartPoint = catPoint2D5;
+            catLine2D5.EndPoint = catPoint2D6;
+
+            Line2D catLine2D6 = catFactory2D1.CreateLine(r_ib+(r_ab-r_ib)/2, r_ih+(r_ah-r_ih)/2, r_ib+ (r_ab - r_ib) / 2,(r_ah-r_ih)/2);
+            catLine2D6.StartPoint = catPoint2D6;
+            catLine2D6.EndPoint = catPoint2D7;
+
+            Line2D catLine2D7 = catFactory2D1.CreateLine(r_ib + (r_ab - r_ib) / 2, (r_ah - r_ih) / 2,(r_ab-r_ib)/2,(r_ah-r_ih)/2);
+            catLine2D7.StartPoint = catPoint2D7;
+            catLine2D7.EndPoint = catPoint2D8;
+
+            Line2D catLine2D8 = catFactory2D1.CreateLine((r_ab - r_ib) / 2, (r_ah - r_ih) / 2, (r_ab - r_ib) / 2, r_ih+(r_ah-r_ih)/2);
+            catLine2D8.StartPoint = catPoint2D8;
+            catLine2D8.EndPoint = catPoint2D5;
+
+            hsp_catiaProfil.CloseEdition();
+            hsp_catiaPart.Part.Update();
+        }
+
+        public void ErzeugeQuadratrohr(Double qr_t)
+        {
+            hsp_catiaPart.Part.InWorkObject = hsp_catiaPart.Part.MainBody;
+
+            ShapeFactory catShapeFactory1 = (ShapeFactory)hsp_catiaPart.Part.ShapeFactory;
+            Pad catPad1 = catShapeFactory1.AddNewPad(hsp_catiaProfil, qr_t);
+
+            catPad1.set_Name("Rechteckrohr");
+
+            hsp_catiaPart.Part.Update();
+        }
+
         public void ErzeugeStab(Double tr)
         {
             hsp_catiaPart.Part.InWorkObject = hsp_catiaPart.Part.MainBody;
@@ -140,6 +218,19 @@ namespace Catia_Anbindung_GUI
 
             hsp_catiaPart.Part.Update();
         }
+
+        public void ErzeugeRohr(Double rtr)
+        {
+            hsp_catiaPart.Part.InWorkObject = hsp_catiaPart.Part.MainBody;
+
+            ShapeFactory catShapeFactory1 = (ShapeFactory)hsp_catiaPart.Part.ShapeFactory;
+            Pad catPad1 = catShapeFactory1.AddNewPad(hsp_catiaProfil, rtr);
+
+            catPad1.set_Name("Rohr");
+
+            hsp_catiaPart.Part.Update();
+        }
+
         public void ErzeugeBalken(Double t)
         {
             hsp_catiaPart.Part.InWorkObject = hsp_catiaPart.Part.MainBody;

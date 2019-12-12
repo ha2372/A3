@@ -114,5 +114,11 @@
   <ItemGroup>
     <Resource Include="Rundprofil.PNG" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Quadratrohr.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Rohrprofil.PNG" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
