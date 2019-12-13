@@ -76,28 +76,44 @@ namespace Catia_Anbindung_GUI
                     int zwei = Convert.ToInt32(TxtB_radius.Text);
                     int drei = Convert.ToInt32(TxtB_RAhoehe.Text);
                     int vier = Convert.ToInt32(TxtB_RAradius.Text);
-                    cc.ErzeugePart();
-                    cc.ErstelleLeereSkizze();
-                    if(eins > 0 & zwei == 0 & drei == 0 & vier == 0)
+                    int fünf = Convert.ToInt32(ChBo_Radien.IsChecked);
+                    if(h>0 ^ r_ah > r_ih & r_ab > r_ib ^ ra > ri)
                     {
-                        cc.ErzeugeRechteck(b, h);
-                        cc.ErzeugeBalken(t);
+                        cc.ErzeugePart();
+                        cc.ErstelleLeereSkizze();
+                        if (eins > 0 & zwei == 0 & drei == 0 & vier == 0)
+                        {
+                            cc.ErzeugeRechteck(b, h);
+                            cc.ErzeugeBalken(t);
+                        }
+                        if (eins == 0 & zwei > 0 & drei == 0 & vier == 0)
+                        {
+                            cc.ErzeugeKreis(r);
+                            cc.ErzeugeStab(tr);
+                        }
+                        if (eins == 0 & zwei == 0 & drei > 0 & vier == 0)
+                        {
+                            if (fünf > 0)
+                            {
+                                cc.ErzeugeVierkantrohr(r_ah, r_ih, r_ab, r_ib);
+                            }
+                            else
+                            {
+                                cc.ErzeugeRechteckRohr(r_ah, r_ih, r_ab, r_ib);
+                            }
+                            cc.ErzeugeQuadratrohr(qr_t);
+                        }
+                        if (eins == 0 & zwei == 0 & drei == 0 & vier > 0)
+                        {
+                            cc.ErzeugeKreisring(ra, ri);
+                            cc.ErzeugeRohr(rtr);
+                        }
                     }
-                    if(eins == 0 & zwei > 0 & drei == 0 & vier == 0)
+                    else
                     {
-                        cc.ErzeugeKreis(r);
-                        cc.ErzeugeStab(tr);
-                    }             
-                    if(eins == 0 & zwei == 0 & drei > 0 & vier == 0)
-                    {
-                        cc.ErzeugeRechteckRohr(r_ah, r_ih, r_ab, r_ib);
-                        cc.ErzeugeQuadratrohr(qr_t);
+                        MessageBox.Show("Äußerer Wert nicht größer als innerer Wert!");
                     }
-                    if(eins == 0 & zwei == 0 & drei == 0 & vier > 0)
-                    {
-                        cc.ErzeugeKreisring(ra, ri);
-                        cc.ErzeugeRohr(rtr);
-                    }                    
+                    
                 }
                 else
                 {
@@ -170,6 +186,6 @@ namespace Catia_Anbindung_GUI
             Felderleeren();
             Grid_Profilauswahl.Visibility = Visibility.Hidden;
             Grid_Rohrprofil.Visibility = Visibility.Visible;
-        }
+        }       
     }    
 }

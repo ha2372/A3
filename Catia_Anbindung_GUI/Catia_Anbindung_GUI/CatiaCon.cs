@@ -144,6 +144,72 @@ namespace Catia_Anbindung_GUI
             hsp_catiaPart.Part.Update();
         }
 
+        public void ErzeugeVierkantrohr(Double r_ah, Double r_ih, Double r_ab, Double r_ib)
+        {
+            hsp_catiaProfil.set_Name("VierkantRohr");
+            Factory2D catFactory2D1 = hsp_catiaProfil.OpenEdition();            
+
+            Point2D catPoint2D1 = catFactory2D1.CreatePoint(r_ab - r_ib, r_ah);
+            Point2D catPoint2D2 = catFactory2D1.CreatePoint(r_ab, r_ah+r_ib-r_ab);
+            Point2D catPoint2D3 = catFactory2D1.CreatePoint(r_ab, 0);
+            Point2D catPoint2D4 = catFactory2D1.CreatePoint(0,0);
+
+            Point2D catPoint2D5 = catFactory2D1.CreatePoint((r_ab - r_ib) / 2, r_ih + (r_ah - r_ih) / 2);
+            Point2D catPoint2D6 = catFactory2D1.CreatePoint(r_ib + (r_ab - r_ib) / 2, r_ih + (r_ah - r_ih) / 2);
+            Point2D catPoint2D7 = catFactory2D1.CreatePoint(r_ib + (r_ab - r_ib) / 2, (r_ah - r_ih) / 2);
+            Point2D catPoint2D8 = catFactory2D1.CreatePoint((r_ab - r_ib) / 2, (r_ah - r_ih) / 2);
+
+            Point2D catPoint2D9 = catFactory2D1.CreatePoint(0, r_ah + r_ib - r_ab);
+            Point2D catPoint2D10 = catFactory2D1.CreatePoint(r_ab - r_ib,r_ah - (r_ab - r_ib));
+
+            Point2D catPoint2D11 = catFactory2D1.CreatePoint(r_ib, r_ah);
+            Point2D catPoint2D12 = catFactory2D1.CreatePoint(r_ib, r_ah+r_ib-r_ab);
+
+            Circle2D catCircle2D1 = catFactory2D1.CreateCircle(r_ab - r_ib, r_ah - (r_ab - r_ib), r_ab - r_ib, r_ab - r_ib, r_ab - r_ib);
+            catCircle2D1.CenterPoint = catPoint2D10;
+            catCircle2D1.StartPoint = catPoint2D1;
+            catCircle2D1.EndPoint = catPoint2D9;
+
+            Circle2D catCircle2D2 = catFactory2D1.CreateCircle(r_ib, r_ah+r_ib-r_ab, r_ab - r_ib, r_ab - r_ib, r_ab - r_ib);
+            catCircle2D2.CenterPoint = catPoint2D12;
+            catCircle2D2.StartPoint = catPoint2D2;
+            catCircle2D2.EndPoint = catPoint2D11;            
+
+            Line2D catLine2D1 = catFactory2D1.CreateLine(r_ab-r_ib, r_ah, r_ib, r_ah);
+            catLine2D1.StartPoint = catPoint2D1;
+            catLine2D1.EndPoint = catPoint2D11;
+
+            Line2D catLine2D2 = catFactory2D1.CreateLine(r_ab, r_ah+r_ab-r_ib, r_ab, 0);
+            catLine2D2.StartPoint = catPoint2D2;
+            catLine2D2.EndPoint = catPoint2D3;
+
+            Line2D catLine2D3 = catFactory2D1.CreateLine(r_ab, 0, 0, 0);
+            catLine2D3.StartPoint = catPoint2D3;
+            catLine2D3.EndPoint = catPoint2D4;
+
+            Line2D catLine2D4 = catFactory2D1.CreateLine(0, 0, 0, r_ah+r_ib-r_ab);
+            catLine2D4.StartPoint = catPoint2D4;
+            catLine2D4.EndPoint = catPoint2D9;
+
+            Line2D catLine2D5 = catFactory2D1.CreateLine((r_ab - r_ib) / 2, r_ih + (r_ah - r_ih) / 2, r_ib + (r_ab - r_ib) / 2, r_ih + (r_ah - r_ih) / 2);
+            catLine2D5.StartPoint = catPoint2D5;
+            catLine2D5.EndPoint = catPoint2D6;
+
+            Line2D catLine2D6 = catFactory2D1.CreateLine(r_ib + (r_ab - r_ib) / 2, r_ih + (r_ah - r_ih) / 2, r_ib + (r_ab - r_ib) / 2, (r_ah - r_ih) / 2);
+            catLine2D6.StartPoint = catPoint2D6;
+            catLine2D6.EndPoint = catPoint2D7;
+
+            Line2D catLine2D7 = catFactory2D1.CreateLine(r_ib + (r_ab - r_ib) / 2, (r_ah - r_ih) / 2, (r_ab - r_ib) / 2, (r_ah - r_ih) / 2);
+            catLine2D7.StartPoint = catPoint2D7;
+            catLine2D7.EndPoint = catPoint2D8;
+
+            Line2D catLine2D8 = catFactory2D1.CreateLine((r_ab - r_ib) / 2, (r_ah - r_ih) / 2, (r_ab - r_ib) / 2, r_ih + (r_ah - r_ih) / 2);
+            catLine2D8.StartPoint = catPoint2D8;
+            catLine2D8.EndPoint = catPoint2D5;
+
+            hsp_catiaProfil.CloseEdition();
+            hsp_catiaPart.Part.Update();
+        }
         public void ErzeugeRechteckRohr(Double r_ah, Double r_ih,Double r_ab,Double r_ib)
         {
             hsp_catiaProfil.set_Name("RechteckRohr");

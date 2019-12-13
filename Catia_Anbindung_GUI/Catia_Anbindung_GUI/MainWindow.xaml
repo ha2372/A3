@@ -47,6 +47,7 @@
             <Label x:Name="Labl_RIbreite" Content="Innenbreite:" HorizontalAlignment="Right" Margin="0,0,110,75" VerticalAlignment="Bottom" Height="25" Width="100" FontSize="14"/>
             <Label x:Name="Labl_RIhoehe" Content="Innenhöhe:" HorizontalAlignment="Right" Margin="0,0,110,125" VerticalAlignment="Bottom" Height="25" Width="100" FontSize="14"/>
             <Button x:Name="Btn_RZurück" Content="Zurück" HorizontalAlignment="Left" Margin="10,0,0,10" VerticalAlignment="Bottom" Width="100" Height="25" Click="Btn_Zurück_Click"/>
+            <CheckBox x:Name="ChBo_Radien" Content="Radien anbringen" HorizontalAlignment="Right" Margin="0,0,25,25" VerticalAlignment="Bottom" FontSize="16"/>
         </Grid>
         <Grid x:Name="Grid_Rohrprofil" HorizontalAlignment="Right" Height="400" Margin="0,0,50,50" VerticalAlignment="Bottom" Width="700" Visibility="Hidden">
             <TextBox x:Name="TxtB_RAradius" HorizontalAlignment="Right" Height="25" Margin="0,0,0,275" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
