@@ -1,0 +1,63 @@
+﻿<Window x:Class="Catia_Anbindung_GUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Catia_Anbindung_GUI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="Btn_Clear" Content="Clear" HorizontalAlignment="Right" Margin="0,0,50,10" VerticalAlignment="Bottom" Width="100" Height="25" Click="Btn_Clear_Click"/>
+        <Button x:Name="Btn_Erstellen" Content="Erstellen" HorizontalAlignment="Right" Margin="0,0,175,10" VerticalAlignment="Bottom" Width="100" Height="25" Click="Btn_Erstellen_Click"/>
+        <Grid x:Name="Grid_Vollprofil_Rechteck" HorizontalAlignment="Right" Height="400" Margin="0,0,50,50" VerticalAlignment="Bottom" Width="700" Visibility="Hidden">
+            <TextBox x:Name="TxtB_hoehe" HorizontalAlignment="Right" Height="25" Margin="0,0,0,275" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
+            <TextBox x:Name="TxtB_breite" HorizontalAlignment="Right" Height="25" Margin="0,0,0,225" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
+            <TextBox x:Name="TxtB_tiefe" HorizontalAlignment="Right" Height="25" Margin="0,0,0,175" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
+            <Label x:Name="Labl_hoehe" Content="Höhe:" HorizontalAlignment="Right" Margin="0,0,110,275" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
+            <Label x:Name="Labl_breite" Content="Breite" HorizontalAlignment="Right" Margin="0,0,110,225" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
+            <Label x:Name="Labl_tiefe" Content="Tiefe" HorizontalAlignment="Right" Margin="0,0,110,175" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
+            <Image x:Name="Pict_Rechteck_groß" HorizontalAlignment="Left" Height="300" Margin="50,50,0,0" VerticalAlignment="Top" Width="300" Source="Rechteck.PNG"/>
+            <Button x:Name="Btn_Zurück" Content="Zurück" HorizontalAlignment="Left" Margin="10,0,0,10" VerticalAlignment="Bottom" Width="100" Height="25" Click="Btn_Zurück_Click"/>
+        </Grid>
+        <Grid x:Name="Grid_Profilauswahl" HorizontalAlignment="Left" Height="350" Margin="50,0,0,50" VerticalAlignment="Bottom" Width="700" Visibility="Visible">
+            <Image x:Name="Pict_Rechteck" HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="100" Source="Rechteck.PNG" MouseLeftButtonDown="Pict_Rechteck_MouseLeftButtonDown"/>
+            <Label x:Name="Labl_Bitte" Content="Bitte wählen Sie ein Profil aus!" HorizontalAlignment="Left" Margin="300,175,0,0" VerticalAlignment="Top" FontSize="24" FontFamily="Segoe UI Black"/>
+            <Image x:Name="Pict_Rundprofil" HorizontalAlignment="Left" Height="100" Margin="10,150,0,0" VerticalAlignment="Top" Width="100" Source="Rundprofil.PNG" MouseLeftButtonDown="Pict_Rundprofil_MouseLeftButtonDown_1"/>
+            <Image x:Name="Pict_Rechteckrohr" HorizontalAlignment="Left" Height="115" Margin="150,20,0,0" VerticalAlignment="Top" Width="115" Source="Quadratrohr.PNG" MouseLeftButtonDown="Pict_Rechteckrohr_MouseLeftButtonDown"/>
+            <Image x:Name="Pict_Rohr" HorizontalAlignment="Left" Height="100" Margin="150,150,0,0" VerticalAlignment="Top" Width="100" Source="Rohrprofil.PNG" MouseLeftButtonDown="Pict_Rohr_MouseLeftButtonDown"/>
+        </Grid>
+        <Grid x:Name="Grid_Vollprofil_Rundprofil" HorizontalAlignment="Right" Height="400" Margin="0,0,50,50" VerticalAlignment="Bottom" Width="700" Visibility="Hidden">
+            <TextBox x:Name="TxtB_radius" HorizontalAlignment="Right" Height="25" Margin="0,0,0,275" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
+            <TextBox x:Name="TxtB_tiefer" HorizontalAlignment="Right" Height="25" Margin="0,0,0,175" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
+            <Label x:Name="Labl_radius" Content="Radius:" HorizontalAlignment="Right" Margin="0,0,110,275" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
+            <Label x:Name="Labl_tiefer" Content="Tiefe" HorizontalAlignment="Right" Margin="0,0,110,175" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
+            <Image x:Name="Pict_Rundprofil_groß" HorizontalAlignment="Left" Height="300" Margin="50,50,0,0" VerticalAlignment="Top" Width="300" Source="Rundprofil.PNG"/>
+            <Button x:Name="Btn_Zurückr" Content="Zurück" HorizontalAlignment="Left" Margin="10,0,0,10" VerticalAlignment="Bottom" Width="100" Height="25" Click="Btn_Zurück_Click"/>
+        </Grid>
+        <Grid x:Name="Grid_Rechteckrohr" HorizontalAlignment="Right" Height="400" Margin="0,0,50,50" VerticalAlignment="Bottom" Width="700" Visibility="Hidden">
+            <TextBox x:Name="TxtB_RAhoehe" HorizontalAlignment="Right" Height="25" Margin="0,0,0,275" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
+            <TextBox x:Name="TxtB_RAbreite" HorizontalAlignment="Right" Height="25" Margin="0,0,0,225" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
+            <TextBox x:Name="TxtB_Rtiefe" HorizontalAlignment="Right" Height="25" Margin="0,0,0,175" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
+            <Label x:Name="Labl_Rhoehe" Content="Außenhöhe:" HorizontalAlignment="Right" Margin="0,0,110,275" VerticalAlignment="Bottom" Height="25" Width="100" FontSize="14"/>
+            <Label x:Name="Labl_Rbreite" Content="Außenbreite:" HorizontalAlignment="Right" Margin="0,0,110,225" VerticalAlignment="Bottom" Height="25" Width="100" FontSize="14"/>
+            <Label x:Name="Labl_Rtiefe" Content="Tiefe:" HorizontalAlignment="Right" Margin="0,0,110,175" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
+            <Image x:Name="Pict_Rechteckrohr_groß" HorizontalAlignment="Left" Height="350" Margin="50,50,0,0" VerticalAlignment="Top" Width="350" Source="Quadratrohr.PNG"/>
+            <TextBox x:Name="TxtB_RIhoehe" HorizontalAlignment="Right" Height="25" Margin="0,0,0,125" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
+            <TextBox x:Name="TxtB_RIbreite" HorizontalAlignment="Right" Height="25" Margin="0,0,0,75" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
+            <Label x:Name="Labl_RIbreite" Content="Innenbreite:" HorizontalAlignment="Right" Margin="0,0,110,75" VerticalAlignment="Bottom" Height="25" Width="100" FontSize="14"/>
+            <Label x:Name="Labl_RIhoehe" Content="Innenhöhe:" HorizontalAlignment="Right" Margin="0,0,110,125" VerticalAlignment="Bottom" Height="25" Width="100" FontSize="14"/>
+            <Button x:Name="Btn_RZurück" Content="Zurück" HorizontalAlignment="Left" Margin="10,0,0,10" VerticalAlignment="Bottom" Width="100" Height="25" Click="Btn_Zurück_Click"/>
+            <CheckBox x:Name="ChBo_Radien" Content="Radien anbringen" HorizontalAlignment="Right" Margin="0,0,25,25" VerticalAlignment="Bottom" FontSize="16"/>
+        </Grid>
+        <Grid x:Name="Grid_Rohrprofil" HorizontalAlignment="Right" Height="400" Margin="0,0,50,50" VerticalAlignment="Bottom" Width="700" Visibility="Hidden">
+            <TextBox x:Name="TxtB_RAradius" HorizontalAlignment="Right" Height="25" Margin="0,0,0,275" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
+            <TextBox x:Name="TxtB_RIradius" HorizontalAlignment="Right" Height="25" Margin="0,0,0,225" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
+            <TextBox x:Name="TxtB_Rtiefer" HorizontalAlignment="Right" Height="25" Margin="0,0,0,175" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
+            <Label x:Name="Labl_RAradius" Content="Außenradius:" HorizontalAlignment="Right" Margin="0,0,110,275" VerticalAlignment="Bottom" Height="25" Width="100" FontSize="14"/>
+            <Label x:Name="Labl_RIradius" Content="Innenradius:" HorizontalAlignment="Right" Margin="0,0,110,225" VerticalAlignment="Bottom" Height="25" Width="100" FontSize="14"/>
+            <Label x:Name="Labl_Rtiefer" Content="Tiefe" HorizontalAlignment="Right" Margin="0,0,110,175" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
+            <Image x:Name="Pict_Rohrprofil_groß" HorizontalAlignment="Left" Height="300" Margin="50,50,0,0" VerticalAlignment="Top" Width="300" Source="Rohrprofil.PNG"/>
+            <Button x:Name="Btn_RZurückr" Content="Zurück" HorizontalAlignment="Left" Margin="10,0,0,10" VerticalAlignment="Bottom" Width="100" Height="25" Click="Btn_Zurück_Click"/>
+        </Grid>
+    </Grid>
+</Window>
