@@ -37,10 +37,9 @@ namespace Catia_Anbindung_GUI
             TxtB_tiefe.Text = "0";
             TxtB_tiefer.Text = "0";
             TxtB_radius.Text = "0";
-            TxtB_RAhoehe.Text = "0";
-            TxtB_RIhoehe.Text = "0";
+            TxtB_RAhoehe.Text = "0";           
             TxtB_RAbreite.Text = "0";
-            TxtB_RIbreite.Text = "0";
+            TxtB_Wandstärke.Text = "0";
             TxtB_RAradius.Text = "0";
             TxtB_RIradius.Text = "0";
             TxtB_Rtiefe.Text = "0";
@@ -65,9 +64,9 @@ namespace Catia_Anbindung_GUI
                     double tr = Convert.ToDouble(TxtB_tiefer.Text);
                     double r = Convert.ToDouble(TxtB_radius.Text);
                     double r_ah = Convert.ToDouble(TxtB_RAhoehe.Text);
-                    double r_ih = Convert.ToDouble(TxtB_RIhoehe.Text);
                     double r_ab = Convert.ToDouble(TxtB_RAbreite.Text);
-                    double r_ib = Convert.ToDouble(TxtB_RIbreite.Text);
+                    double x = Convert.ToDouble(TxtB_Wandstärke.Text);
+                    double z = 2 * x;
                     double qr_t = Convert.ToDouble(TxtB_Rtiefe.Text);
                     double ra = Convert.ToDouble(TxtB_RAradius.Text);
                     double ri = Convert.ToDouble(TxtB_RIradius.Text);
@@ -76,8 +75,8 @@ namespace Catia_Anbindung_GUI
                     int zwei = Convert.ToInt32(TxtB_radius.Text);
                     int drei = Convert.ToInt32(TxtB_RAhoehe.Text);
                     int vier = Convert.ToInt32(TxtB_RAradius.Text);
-                    int fünf = Convert.ToInt32(ChBo_Radien.IsChecked);
-                    if(h>0 ^ r_ah > r_ih & r_ab > r_ib ^ ra > ri ^ r > 0)
+                    int fünf = Convert.ToInt32(ChBo_Radien.IsChecked);                   
+                    if (h>0 ^ r_ah >0&r_ab>0 ^ ra > ri ^ r > 0)
                     {
                         cc.ErzeugePart();
                         cc.ErstelleLeereSkizze();
@@ -95,11 +94,11 @@ namespace Catia_Anbindung_GUI
                         {
                             if (fünf > 0)
                             {
-                                cc.ErzeugeVierkantrohr(r_ah, r_ih, r_ab, r_ib);
+                                cc.ErzeugeVierkantrohr(r_ah, r_ab,z);
                             }
                             else
                             {
-                                cc.ErzeugeRechteckRohr(r_ah, r_ih, r_ab, r_ib);
+                                cc.ErzeugeRechteckRohr(r_ah, r_ab,z);
                             }
                             cc.ErzeugeQuadratrohr(qr_t);
                         }
@@ -111,7 +110,7 @@ namespace Catia_Anbindung_GUI
                     }
                     else
                     {
-                        MessageBox.Show("Äußerer Wert nicht größer als innerer Wert!");
+                        MessageBox.Show("Äußerer Wert nicht größer als innerer Wert! Wert kleiner Null!");
                     }
                     
                 }
