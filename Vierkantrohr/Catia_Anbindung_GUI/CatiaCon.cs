@@ -23,6 +23,7 @@ namespace Catia_Anbindung_GUI
         INFITF.Application hsp_catiaApp;
         MECMOD.PartDocument hsp_catiaPart;
         MECMOD.Sketch hsp_catiaProfil;
+        //Funktion CatiaLäuft
         public bool CATIALaeuft()
         {
             try
@@ -37,12 +38,14 @@ namespace Catia_Anbindung_GUI
                 return false;
             }
         }
+        //Funktion ErzeugePart
         public Boolean ErzeugePart()
         {
             INFITF.Documents catDocuments1 = hsp_catiaApp.Documents;
             hsp_catiaPart = catDocuments1.Add("Part") as MECMOD.PartDocument;
             return true;
         }
+        //Funktion Skizze erstellen
         public void ErstelleLeereSkizze()
         {
             HybridBody catHybridBody1;
@@ -76,6 +79,7 @@ namespace Catia_Anbindung_GUI
             ErzeugeAchsensystem();
             hsp_catiaPart.Part.Update();
         }
+        //Funktion ErzeugeAchsensystem
         private void ErzeugeAchsensystem()
         {
             object[] arr = new object[]
@@ -86,7 +90,7 @@ namespace Catia_Anbindung_GUI
             };
             hsp_catiaProfil.SetAbsoluteAxisData(arr);
         }
-
+        //Funktion ErzeugeKreis
         public void ErzeugeKreis(Double r)
         {
             hsp_catiaProfil.set_Name("Kreis");
@@ -99,7 +103,7 @@ namespace Catia_Anbindung_GUI
             hsp_catiaProfil.CloseEdition();
             hsp_catiaPart.Part.Update();
         }
-
+        //Funktion ErzeugeKreisring
         public void ErzeugeKreisring(Double ra, Double ri)
         {
             hsp_catiaProfil.set_Name("Kreisring");
@@ -113,7 +117,7 @@ namespace Catia_Anbindung_GUI
             hsp_catiaProfil.CloseEdition();
             hsp_catiaPart.Part.Update();
         }
-
+        //Funktion ErzeugeRechteck
         public void ErzeugeRechteck(Double h, Double b)
         {
             hsp_catiaProfil.set_Name("Rechteck");
@@ -143,7 +147,7 @@ namespace Catia_Anbindung_GUI
             hsp_catiaProfil.CloseEdition();
             hsp_catiaPart.Part.Update();
         }
-
+        //Funktion ErzeugeVierkantrohr (mitRadien)
         public void ErzeugeVierkantrohr(Double r_ah, Double r_ab,Double z)
         {
             hsp_catiaProfil.set_Name("VierkantRohr");
@@ -259,6 +263,7 @@ namespace Catia_Anbindung_GUI
             hsp_catiaProfil.CloseEdition();
             hsp_catiaPart.Part.Update();
         }
+        //Funktion Erzeuge RechteckRohr (ohneRadien)
         public void ErzeugeRechteckRohr(Double r_ah,Double r_ab,Double z)
         {
             hsp_catiaProfil.set_Name("RechteckRohr");
@@ -309,7 +314,7 @@ namespace Catia_Anbindung_GUI
             hsp_catiaProfil.CloseEdition();
             hsp_catiaPart.Part.Update();
         }
-
+        //Funktion ErzeugeQuadratrohr
         public void ErzeugeQuadratrohr(Double qr_t)
         {
             hsp_catiaPart.Part.InWorkObject = hsp_catiaPart.Part.MainBody;
@@ -321,7 +326,7 @@ namespace Catia_Anbindung_GUI
 
             hsp_catiaPart.Part.Update();
         }
-
+        //Funktion ErzeugeStab
         public void ErzeugeStab(Double tr)
         {
             hsp_catiaPart.Part.InWorkObject = hsp_catiaPart.Part.MainBody;
@@ -333,7 +338,7 @@ namespace Catia_Anbindung_GUI
 
             hsp_catiaPart.Part.Update();
         }
-
+        //Funktion ErzeugeRohr
         public void ErzeugeRohr(Double rtr)
         {
             hsp_catiaPart.Part.InWorkObject = hsp_catiaPart.Part.MainBody;
@@ -345,7 +350,7 @@ namespace Catia_Anbindung_GUI
 
             hsp_catiaPart.Part.Update();
         }
-
+        //Funktion ErzeugeBalken
         public void ErzeugeBalken(Double t)
         {
             hsp_catiaPart.Part.InWorkObject = hsp_catiaPart.Part.MainBody;
