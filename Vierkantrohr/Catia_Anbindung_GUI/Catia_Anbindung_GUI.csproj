@@ -120,5 +120,8 @@
   <ItemGroup>
     <Resource Include="Rohrprofil.PNG" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Firmenlogo.PNG" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
