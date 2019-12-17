@@ -5,94 +5,99 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Catia_Anbindung_GUI"
         mc:Ignorable="d"
-        Title="Catia-Anbindung-Halbzeuge" Height="450" Width="800">
+        Title="Catia-Anbindung-Halbzeuge" Height="450" Width="800"
+        MinHeight="450" MinWidth="800"
+        MaxHeight="450" MaxWidth="800">
     <Grid>
 
-        <Grid x:Name="Grid_Vollprofil_Rechteck" HorizontalAlignment="Right" Height="400" Margin="0,0,50,50" VerticalAlignment="Bottom" Width="700" Visibility="Hidden">
-            <TextBox x:Name="TxtB_hoehe" HorizontalAlignment="Right" Height="25" Margin="0,0,50,275" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
-            <TextBox x:Name="TxtB_breite" HorizontalAlignment="Right" Height="25" Margin="0,0,50,225" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
-            <TextBox x:Name="TxtB_tiefe" HorizontalAlignment="Right" Height="25" Margin="0,0,50,175" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
-            <Label x:Name="Labl_hoehe" Content="Höhe:" HorizontalAlignment="Right" Margin="0,0,160,275" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
-            <Label x:Name="Labl_breite" Content="Breite" HorizontalAlignment="Right" Margin="0,0,160,225" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
-            <Label x:Name="Labl_tiefe" Content="Tiefe" HorizontalAlignment="Right" Margin="0,0,160,175" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
-            <Image x:Name="Pict_Rechteck_groß" HorizontalAlignment="Left" Height="280" Margin="50,50,0,0" VerticalAlignment="Top" Width="280" Source="Rechteck.PNG"/>
-            <Label x:Name="Labl_1" Content="mm" HorizontalAlignment="Right" Margin="0,0,0,275" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
-            <Label x:Name="Labl_2" Content="mm" HorizontalAlignment="Right" Margin="0,0,0,225" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
-            <Label x:Name="Labl_3" Content="mm" HorizontalAlignment="Right" Margin="0,0,0,175" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
+        <Grid x:Name="Grid_Vollprofil_Rechteck" HorizontalAlignment="Right" Height="450" Margin="0,0,50,0" VerticalAlignment="Bottom" Width="700" Visibility="Hidden">
+            <TextBox x:Name="TxtB_hoehe" HorizontalAlignment="Right" Height="25" Margin="0,0,50,375" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
+            <TextBox x:Name="TxtB_breite" HorizontalAlignment="Right" Height="25" Margin="0,0,50,325" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
+            <TextBox x:Name="TxtB_tiefe" HorizontalAlignment="Right" Height="25" Margin="0,0,50,275" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
+            <Label x:Name="Labl_hoehe" Content="Höhe:" HorizontalAlignment="Right" Margin="0,0,155,375" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
+            <Label x:Name="Labl_breite" Content="Breite:" HorizontalAlignment="Right" Margin="0,0,155,325" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
+            <Label x:Name="Labl_tiefe" Content="Tiefe:" HorizontalAlignment="Right" Margin="0,0,150,275" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
+            <Image x:Name="Pict_Rechteck_groß" HorizontalAlignment="Left" Height="280" Margin="25,25,0,0" VerticalAlignment="Top" Width="280" Source="Rechteck.PNG"/>
+            <Label x:Name="Labl_1" Content="mm" HorizontalAlignment="Right" Margin="0,0,0,375" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
+            <Label x:Name="Labl_2" Content="mm" HorizontalAlignment="Right" Margin="0,0,0,325" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
+            <Label x:Name="Labl_3" Content="mm" HorizontalAlignment="Right" Margin="0,0,0,275" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
             <Button x:Name="Btn_Zurück" Content="Zurück" HorizontalAlignment="Left" Margin="10,0,0,10" VerticalAlignment="Bottom" Width="100" Height="25" Click="Btn_Zurück_Click"/>
         </Grid>
         <Grid x:Name="Grid_Profilauswahl" HorizontalAlignment="Left" Height="400" Margin="0,0,0,0" VerticalAlignment="Bottom" Width="750" Visibility="Visible">
             <Image x:Name="Pict_Rechteck" HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="100" Source="Rechteck.PNG" MouseLeftButtonDown="Pict_Rechteck_MouseLeftButtonDown"/>
-            <Label x:Name="Labl_Bitte" Content="Bitte wählen Sie ein Profil aus!" HorizontalAlignment="Left" Margin="300,175,0,0" VerticalAlignment="Top" FontSize="24" FontFamily="Segoe UI Black"/>
+            <Label x:Name="Labl_Bitte" Content="Profilauswahl:" HorizontalAlignment="Left" Margin="380,40,0,0" VerticalAlignment="Top" FontSize="35" FontFamily="Segoe UI Black"/>
+            <Label x:Name="Labl_Danke" Content="Profil durck Klick auf den gwünschten" HorizontalAlignment="Left" Margin="330,140,0,0" VerticalAlignment="Top" FontSize="18" FontFamily="Segoe UI Black"/>
+            <Label x:Name="Labl_Dankeschön" Content="Querschnitt auswählen!" HorizontalAlignment="Left" Margin="390,170,0,0" VerticalAlignment="Top" FontSize="18" FontFamily="Segoe UI Black"/>
+            <Label x:Name="Labl_Zusatz" Content="Quadratische Querschnitte bitte durch gleichseitige Rechtecke erzeugen." HorizontalAlignment="Left" Margin="270,250,0,0" VerticalAlignment="Top" FontSize="14" FontFamily="Arial"/>
             <Image x:Name="Pict_Rundprofil" HorizontalAlignment="Left" Height="100" Margin="10,150,0,0" VerticalAlignment="Top" Width="100" Source="Rundprofil.PNG" MouseLeftButtonDown="Pict_Rundprofil_MouseLeftButtonDown_1"/>
             <Image x:Name="Pict_Rechteckrohr" HorizontalAlignment="Left" Height="115" Margin="150,20,0,0" VerticalAlignment="Top" Width="115" Source="Quadratrohr.PNG" MouseLeftButtonDown="Pict_Rechteckrohr_MouseLeftButtonDown"/>
             <Image x:Name="Pict_Rohr" HorizontalAlignment="Left" Height="100" Margin="150,150,0,0" VerticalAlignment="Top" Width="100" Source="Rohrprofil.PNG" MouseLeftButtonDown="Pict_Rohr_MouseLeftButtonDown"/>
             <Image x:Name="Pict_Logo" HorizontalAlignment="Left" Height="100" Margin="150,0,0,10" VerticalAlignment="Bottom" Width="500" Source="Firmenlogo.PNG"/>
         </Grid>
-        <Grid x:Name="Grid_Vollprofil_Rundprofil" HorizontalAlignment="Right" Height="400" Margin="0,0,50,50" VerticalAlignment="Bottom" Width="700" Visibility="Hidden">
-            <TextBox x:Name="TxtB_radius" HorizontalAlignment="Right" Height="25" Margin="0,0,50,275" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
-            <TextBox x:Name="TxtB_tiefer" HorizontalAlignment="Right" Height="25" Margin="0,0,50,175" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
-            <Label x:Name="Labl_radius" Content="Radius:" HorizontalAlignment="Right" Margin="0,0,160,275" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
-            <Label x:Name="Labl_tiefer" Content="Tiefe" HorizontalAlignment="Right" Margin="0,0,160,175" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
-            <Image x:Name="Pict_Rundprofil_groß" HorizontalAlignment="Left" Height="280" Margin="50,50,0,0" VerticalAlignment="Top" Width="280" Source="Rundprofil.PNG"/>
-            <Label x:Name="Labl_4" Content="mm" HorizontalAlignment="Right" Margin="0,0,0,275" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
-            <Label x:Name="Labl_5" Content="mm" HorizontalAlignment="Right" Margin="0,0,0,175" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
+        <Grid x:Name="Grid_Vollprofil_Rundprofil" HorizontalAlignment="Right" Height="450" Margin="0,0,50,0" VerticalAlignment="Bottom" Width="700" Visibility="Hidden">
+            <TextBox x:Name="TxtB_radius" HorizontalAlignment="Right" Height="25" Margin="0,0,50,375" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
+            <TextBox x:Name="TxtB_tiefer" HorizontalAlignment="Right" Height="25" Margin="0,0,50,275" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
+            <Label x:Name="Labl_radius" Content="Radius:" HorizontalAlignment="Right" Margin="0,0,156,375" VerticalAlignment="Bottom" Height="25" Width="55" FontSize="14"/>
+            <Label x:Name="Labl_tiefer" Content="Tiefe:" HorizontalAlignment="Right" Margin="0,0,148,275" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
+            <Image x:Name="Pict_Rundprofil_groß" HorizontalAlignment="Left" Height="280" Margin="25,25,0,0" VerticalAlignment="Top" Width="280" Source="Rundprofil.PNG"/>
+            <Label x:Name="Labl_4" Content="mm" HorizontalAlignment="Right" Margin="0,0,0,375" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
+            <Label x:Name="Labl_5" Content="mm" HorizontalAlignment="Right" Margin="0,0,0,275" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
             <Button x:Name="Btn_Zurückr" Content="Zurück" HorizontalAlignment="Left" Margin="10,0,0,10" VerticalAlignment="Bottom" Width="100" Height="25" Click="Btn_Zurück_Click"/>
         </Grid>
-        <Grid x:Name="Grid_Rechteckrohr" HorizontalAlignment="Right" Height="400" Margin="0,0,50,50" VerticalAlignment="Bottom" Width="700" Visibility="Hidden">
-            <TextBox x:Name="TxtB_RAhoehe" HorizontalAlignment="Right" Height="25" Margin="0,0,50,275" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
-            <TextBox x:Name="TxtB_RAbreite" HorizontalAlignment="Right" Height="25" Margin="0,0,50,225" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
-            <TextBox x:Name="TxtB_Rtiefe" HorizontalAlignment="Right" Height="25" Margin="0,0,50,175" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
-            <Label x:Name="Labl_Rhoehe" Content="Außenhöhe:" HorizontalAlignment="Right" Margin="0,0,160,275" VerticalAlignment="Bottom" Height="25" Width="100" FontSize="14"/>
-            <Label x:Name="Labl_Rbreite" Content="Außenbreite:" HorizontalAlignment="Right" Margin="0,0,160,225" VerticalAlignment="Bottom" Height="25" Width="100" FontSize="14"/>
-            <Label x:Name="Labl_Rtiefe" Content="Tiefe:" HorizontalAlignment="Right" Margin="0,0,160,175" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
-            <Image x:Name="Pict_Rechteckrohr_groß" HorizontalAlignment="Left" Height="350" Margin="50,50,0,0" VerticalAlignment="Top" Width="350" Source="Quadratrohr.PNG"/>
-            <TextBox x:Name="TxtB_Wandstärke" HorizontalAlignment="Right" Height="25" Margin="0,0,50,125" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
-            <Label x:Name="Labl_Wandstärke" Content="Wandstärke:" HorizontalAlignment="Right" Margin="0,0,160,125" VerticalAlignment="Bottom" Height="25" Width="100" FontSize="14"/>
-            <Label x:Name="Labl_6" Content="mm" HorizontalAlignment="Right" Margin="0,0,0,275" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
-            <Label x:Name="Labl_7" Content="mm" HorizontalAlignment="Right" Margin="0,0,0,225" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
-            <Label x:Name="Labl_8" Content="mm" HorizontalAlignment="Right" Margin="0,0,0,175" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
-            <Label x:Name="Labl_9" Content="mm" HorizontalAlignment="Right" Margin="0,0,0,125" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
+        <Grid x:Name="Grid_Rechteckrohr" HorizontalAlignment="Right" Height="450" Margin="0,0,50,0" VerticalAlignment="Bottom" Width="700" Visibility="Hidden">
+            <TextBox x:Name="TxtB_RAhoehe" HorizontalAlignment="Right" Height="25" Margin="0,0,50,375" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
+            <TextBox x:Name="TxtB_RAbreite" HorizontalAlignment="Right" Height="25" Margin="0,0,50,325" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
+            <TextBox x:Name="TxtB_Rtiefe" HorizontalAlignment="Right" Height="25" Margin="0,0,50,275" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
+            <Label x:Name="Labl_Rhoehe" Content="Außenhöhe:" HorizontalAlignment="Right" Margin="0,0,150,375" VerticalAlignment="Bottom" Height="25" Width="90" FontSize="14"/>
+            <Label x:Name="Labl_Rbreite" Content="Außenbreite:" HorizontalAlignment="Right" Margin="0,0,155,325" VerticalAlignment="Bottom" Height="25" Width="90" FontSize="14"/>
+            <Label x:Name="Labl_Rtiefe" Content="Tiefe:" HorizontalAlignment="Right" Margin="0,0,150,275" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
+            <Image x:Name="Pict_Rechteckrohr_groß" HorizontalAlignment="Left" Height="350" Margin="25,25,0,0" VerticalAlignment="Top" Width="350" Source="Quadratrohr.PNG"/>
+            <TextBox x:Name="TxtB_Wandstärke" HorizontalAlignment="Right" Height="25" Margin="0,0,50,225" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
+            <Label x:Name="Labl_Wandstärke" Content="Wandstärke:" HorizontalAlignment="Right" Margin="0,0,152,225" VerticalAlignment="Bottom" Height="25" Width="90" FontSize="14"/>
+            <Label x:Name="Labl_6" Content="mm" HorizontalAlignment="Right" Margin="0,0,0,375" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
+            <Label x:Name="Labl_7" Content="mm" HorizontalAlignment="Right" Margin="0,0,0,325" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
+            <Label x:Name="Labl_8" Content="mm" HorizontalAlignment="Right" Margin="0,0,0,275" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
+            <Label x:Name="Labl_9" Content="mm" HorizontalAlignment="Right" Margin="0,0,0,225" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
             <Button x:Name="Btn_RZurück" Content="Zurück" HorizontalAlignment="Left" Margin="10,0,0,10" VerticalAlignment="Bottom" Width="100" Height="25" Click="Btn_Zurück_Click"/>
-            <CheckBox x:Name="ChBo_Radien" Content="Radien anbringen" HorizontalAlignment="Right" Margin="0,0,50,0" VerticalAlignment="Bottom" FontSize="16"/>
+            <CheckBox x:Name="ChBo_Radien" Content="Radien anbringen" HorizontalAlignment="Right" Margin="0,0,50,190" VerticalAlignment="Bottom" FontSize="16"/>
         </Grid>
-        <Grid x:Name="Grid_Rohrprofil" HorizontalAlignment="Right" Height="400" Margin="0,0,50,50" VerticalAlignment="Bottom" Width="700" Visibility="Hidden">
-            <TextBox x:Name="TxtB_RAradius" HorizontalAlignment="Right" Height="25" Margin="0,0,50,275" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
-            <TextBox x:Name="TxtB_RIradius" HorizontalAlignment="Right" Height="25" Margin="0,0,50,225" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
-            <TextBox x:Name="TxtB_Rtiefer" HorizontalAlignment="Right" Height="25" Margin="0,0,50,175" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
-            <Label x:Name="Labl_RAradius" Content="Außenradius:" HorizontalAlignment="Right" Margin="0,0,160,275" VerticalAlignment="Bottom" Height="25" Width="100" FontSize="14"/>
-            <Label x:Name="Labl_RIradius" Content="Innenradius:" HorizontalAlignment="Right" Margin="0,0,160,225" VerticalAlignment="Bottom" Height="25" Width="100" FontSize="14"/>
-            <Label x:Name="Labl_Rtiefer" Content="Tiefe" HorizontalAlignment="Right" Margin="0,0,160,175" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
-            <Image x:Name="Pict_Rohrprofil_groß" HorizontalAlignment="Left" Height="280" Margin="50,50,0,0" VerticalAlignment="Top" Width="280" Source="Rohrprofil.PNG"/>
-            <Label x:Name="Labl_10" Content="mm" HorizontalAlignment="Right" Margin="0,0,0,275" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
-            <Label x:Name="Labl_11" Content="mm" HorizontalAlignment="Right" Margin="0,0,0,225" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
-            <Label x:Name="Labl_12" Content="mm" HorizontalAlignment="Right" Margin="0,0,0,175" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
+        <Grid x:Name="Grid_Rohrprofil" HorizontalAlignment="Right" Height="450" Margin="0,0,50,0" VerticalAlignment="Bottom" Width="700" Visibility="Hidden">
+            <TextBox x:Name="TxtB_RAradius" HorizontalAlignment="Right" Height="25" Margin="0,0,50,375" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
+            <TextBox x:Name="TxtB_RIradius" HorizontalAlignment="Right" Height="25" Margin="0,0,50,325" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
+            <TextBox x:Name="TxtB_Rtiefer" HorizontalAlignment="Right" Height="25" Margin="0,0,50,275" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
+            <Label x:Name="Labl_RAradius" Content="Außenradius:" HorizontalAlignment="Right" Margin="0,0,155,375" VerticalAlignment="Bottom" Height="25" Width="90" FontSize="14"/>
+            <Label x:Name="Labl_RIradius" Content="Innenradius:" HorizontalAlignment="Right" Margin="0,0,152,325" VerticalAlignment="Bottom" Height="25" Width="90" FontSize="14"/>
+            <Label x:Name="Labl_Rtiefer" Content="Tiefe:" HorizontalAlignment="Right" Margin="0,0,150,275" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
+            <Image x:Name="Pict_Rohrprofil_groß" HorizontalAlignment="Left" Height="280" Margin="25,25,0,0" VerticalAlignment="Top" Width="280" Source="Rohrprofil.PNG"/>
+            <Label x:Name="Labl_10" Content="mm" HorizontalAlignment="Right" Margin="0,0,0,375" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
+            <Label x:Name="Labl_11" Content="mm" HorizontalAlignment="Right" Margin="0,0,0,325" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
+            <Label x:Name="Labl_12" Content="mm" HorizontalAlignment="Right" Margin="0,0,0,275" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
             <Button x:Name="Btn_RZurückr" Content="Zurück" HorizontalAlignment="Left" Margin="10,0,0,10" VerticalAlignment="Bottom" Width="100" Height="25" Click="Btn_Zurück_Click"/>
         </Grid>
-        <Grid x:Name="Grid_Info" HorizontalAlignment="Right" Height="150" Margin="0,0,50,0" VerticalAlignment="Bottom" Width="700" Visibility="Hidden">
+        <Grid x:Name="Grid_Info" HorizontalAlignment="Right" Height="200" Margin="0,0,50,0" VerticalAlignment="Bottom" Width="700" Visibility="Hidden">
             <Button x:Name="Btn_Clear" Content="Clear" HorizontalAlignment="Right" Margin="0,0,0,10" VerticalAlignment="Bottom" Width="100" Height="25" Click="Btn_Clear_Click"/>
-            <Button x:Name="Btn_Erstellen" Content="Erstellen" HorizontalAlignment="Right" Margin="0,0,125,10" VerticalAlignment="Bottom" Width="100" Height="25" Click="Btn_Erstellen_Click"/>
-            <TextBox x:Name="TxtB_Querschnittsfläche" HorizontalAlignment="Right" Height="25" Margin="0,0,50,125" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
-            <TextBox x:Name="TxtB_Volumen" HorizontalAlignment="Right" Height="25" Margin="0,0,50,100" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
-            <TextBox x:Name="TxtB_Gewicht" HorizontalAlignment="Right" Height="25" Margin="0,0,50,75" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
-            <TextBox x:Name="TxtB_Flächenträgheitsmoment" HorizontalAlignment="Left" Height="25" Margin="280,0,0,10" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
-            <Label x:Name="Labl_Querschnittsfläche" Content="Querschnittsfläche:" HorizontalAlignment="Right" Margin="0,0,170,125" VerticalAlignment="Bottom" Height="25" Width="130" FontSize="14"/>
-            <Label x:Name="Labl_Volumen" Content="Volumen:" HorizontalAlignment="Right" Margin="0,0,140,100" VerticalAlignment="Bottom" Height="25" Width="100" FontSize="14"/>
-            <Label x:Name="Labl_Gewicht" Content="Gewicht:" HorizontalAlignment="Right" Margin="0,0,140,75" VerticalAlignment="Bottom" Height="25" Width="100" FontSize="14"/>
-            <Label x:Name="Labl_Flächenträgheitsmoment" Content="Flächenträgheitsmoment:" HorizontalAlignment="Left" Margin="110,0,0,10" VerticalAlignment="Bottom" Height="25" Width="165" FontSize="14"/>
-            <Label x:Name="Labl_13" Content="mm²" HorizontalAlignment="Right" Margin="0,0,0,125" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
-            <Label x:Name="Labl_14" Content="mm³" HorizontalAlignment="Right" Margin="0,0,0,100" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
-            <Label x:Name="Labl_16" Content="kg" HorizontalAlignment="Right" Margin="0,0,0,75" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="10"/>
-            <Label x:Name="Labl_15" Content="m^4" HorizontalAlignment="Right" Margin="0,0,270,10" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14" RenderTransformOrigin="-1.48,0.48"/>
-            <Button x:Name="Btn_Berechnen" Content="Berechnen" HorizontalAlignment="Left" Margin="10,0,0,10" VerticalAlignment="Bottom" Width="100" Height="25" Click="Btn_Berechnen_Click"/>
-            <TextBox x:Name="TxtB_Dichte" HorizontalAlignment="Right" Height="25" Margin="0,0,450,100" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Width="50" FontSize="16"/>
-            <Label x:Name="Labl_Dichte" Content="Dichte eingeben:" HorizontalAlignment="Right" Margin="0,0,500,100" VerticalAlignment="Bottom" Height="25" Width="130" FontSize="12"/>
-            <Label x:Name="Labl_Stahl" Content="Stahl" HorizontalAlignment="Right" Margin="0,0,400,75" VerticalAlignment="Bottom" Height="25" Width="100" FontSize="14"/>
-            <Label x:Name="Labl_Aluminium" Content="Aluminium" HorizontalAlignment="Right" Margin="0,0,400,50" VerticalAlignment="Bottom" Height="25" Width="100" FontSize="14"/>
-            <Label x:Name="Labl_Einheit" Content="kg/m³" HorizontalAlignment="Right" Margin="0,0,400,100" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="10"/>
-            <CheckBox x:Name="ChBo_Dichte" HorizontalAlignment="Right" Margin="0,0,505,105" VerticalAlignment="Bottom" FontSize="16" Checked="ChBo_Dichte_Checked"/>
-            <CheckBox x:Name="ChBo_Stahl" HorizontalAlignment="Right" Margin="0,0,505,75" VerticalAlignment="Bottom" FontSize="16" Checked="ChBo_Stahl_Checked"/>
-            <CheckBox x:Name="ChBo_Aluminium" HorizontalAlignment="Right" Margin="0,0,505,50" VerticalAlignment="Bottom" FontSize="16" Checked="ChBo_Aluminium_Checked"/>
+            <Button x:Name="Btn_Erstellen" Content="Erstellen" HorizontalAlignment="Right" Margin="0,0,225,10" VerticalAlignment="Bottom" Width="100" Height="25" Click="Btn_Erstellen_Click"/>
+            <TextBox x:Name="TxtB_Querschnittsfläche" HorizontalAlignment="Right" Height="25" Margin="0,0,50,150" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
+            <TextBox x:Name="TxtB_Volumen" HorizontalAlignment="Right" Height="25" Margin="0,0,50,125" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
+            <TextBox x:Name="TxtB_Gewicht" HorizontalAlignment="Right" Height="25" Margin="0,0,50,100" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
+            <TextBox x:Name="TxtB_Flächenträgheitsmoment" HorizontalAlignment="Right" Height="25" Margin="0,0,50,75" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Width="100" FontSize="16"/>
+            <Label x:Name="Labl_Querschnittsfläche" Content="Querschnittsfläche:" HorizontalAlignment="Right" Margin="0,0,150,150" VerticalAlignment="Bottom" Height="25" Width="130" FontSize="14"/>
+            <Label x:Name="Labl_Volumen" Content="Volumen:" HorizontalAlignment="Right" Margin="0,0,120,125" VerticalAlignment="Bottom" Height="25" Width="100" FontSize="14"/>
+            <Label x:Name="Labl_Gewicht" Content="Gewicht:" HorizontalAlignment="Right" Margin="0,0,115,100" VerticalAlignment="Bottom" Height="25" Width="100" FontSize="14"/>
+            <Label x:Name="Labl_Flächenträgheitsmoment" Content="Flächenträgheitsmoment:" HorizontalAlignment="Right" Margin="0,0,152,75" VerticalAlignment="Bottom" Height="30" Width="166" FontSize="14"/>
+            <Label x:Name="Labl_13" Content="mm²" HorizontalAlignment="Right" Margin="0,0,0,150" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
+            <Label x:Name="Labl_14" Content="mm³" HorizontalAlignment="Right" Margin="0,0,0,125" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14"/>
+            <Label x:Name="Labl_16" Content="kg" HorizontalAlignment="Right" Margin="0,0,0,100" VerticalAlignment="Bottom" Height="30" Width="50" FontSize="14"/>
+            <Label x:Name="Labl_15" Content="m^4" HorizontalAlignment="Right" Margin="0,0,0,75" VerticalAlignment="Bottom" Height="25" Width="50" FontSize="14" RenderTransformOrigin="-1.48,0.48"/>
+            <Button x:Name="Btn_Berechnen" Content="Berechnen" HorizontalAlignment="Right" Margin="0,0,350,10" VerticalAlignment="Bottom" Width="100" Height="25" Click="Btn_Berechnen_Click"/>
+            <TextBox x:Name="TxtB_Dichte" HorizontalAlignment="Right" Height="25" Margin="0,0,450,120" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Width="50" FontSize="16"/>
+            <Label x:Name="Labl_Dichte" Content="Dichte:" HorizontalAlignment="Right" Margin="0,0,530,90" VerticalAlignment="Bottom" Height="30" Width="55" FontSize="14"/>
+            <Label x:Name="Labl_Stahl" Content="Stahl" HorizontalAlignment="Right" Margin="0,0,400,95" VerticalAlignment="Bottom" Height="25" Width="100" FontSize="14"/>
+            <Label x:Name="Labl_Aluminium" Content="Aluminium" HorizontalAlignment="Right" Margin="0,0,400,70" VerticalAlignment="Bottom" Height="25" Width="100" FontSize="14"/>
+            <Label x:Name="Labl_Einheit" Content="kg/m³" HorizontalAlignment="Right" Margin="0,0,400,120" VerticalAlignment="Bottom" Height="30" Width="50" FontSize="14"/>
+            <CheckBox x:Name="ChBo_Dichte" HorizontalAlignment="Right" Margin="0,0,505,125" VerticalAlignment="Bottom" FontSize="16" Checked="ChBo_Dichte_Checked"/>
+            <CheckBox x:Name="ChBo_Stahl" HorizontalAlignment="Right" Margin="0,0,505,95" VerticalAlignment="Bottom" FontSize="16" Checked="ChBo_Stahl_Checked"/>
+            <CheckBox x:Name="ChBo_Aluminium" HorizontalAlignment="Right" Margin="0,0,505,70" VerticalAlignment="Bottom" FontSize="16" Checked="ChBo_Aluminium_Checked"/>
         </Grid>
     </Grid>
 </Window>

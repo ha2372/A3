@@ -248,54 +248,63 @@ namespace Catia_Anbindung_GUI
             int vier = Convert.ToInt32(TxtB_RAradius.Text);
             int fünf = Convert.ToInt32(ChBo_Radien.IsChecked);
             int sechs = Convert.ToInt32(ChBo_Dichte.IsChecked);
-            //Benutzerdefinierte Dichte
-            if (sechs>0)
+            //Kontrolle negative Werte
+            if (h > 0 ^ r_ah > 0 & r_ab > 0 ^ ra > ri ^ r > 0)
             {
-                d = Convert.ToDouble(TxtB_Dichte.Text);
-            }
-            //Rechteck Vollprofil
-            if (eins > 0 & zwei == 0 & drei == 0 & vier == 0)
-            {
-                TxtB_Querschnittsfläche.Text = Convert.ToString( h * b);
-                TxtB_Volumen.Text = Convert.ToString(h * b * t);
-                TxtB_Flächenträgheitsmoment.Text = Convert.ToString((b / 1000) * (h / 1000) * (h / 1000) * (h / 1000) / 12);
-                TxtB_Gewicht.Text = Convert.ToString((h * b * t)*d/1000/1000);
-            }
-            //Kreis Vollprofil
-            if (eins == 0 & zwei > 0 & drei == 0 & vier == 0)
-            {
-                TxtB_Querschnittsfläche.Text = Convert.ToString(3.14*r*r);
-                TxtB_Volumen.Text = Convert.ToString(3.14*r*r*tr);
-                TxtB_Flächenträgheitsmoment.Text = Convert.ToString(3.14 * (2 * r / 1000) * (2 * r / 1000) * (2 * r / 1000) * (2 * r / 1000) / 64);
-                TxtB_Gewicht.Text = Convert.ToString((3.14 * r * r * tr)*d/1000/1000);
-            }
-            //Kreis Rohr
-            if (eins == 0 & zwei == 0 & drei == 0 & vier > 0)
-            {
-                TxtB_Querschnittsfläche.Text = Convert.ToString((3.14 * ra * ra)-(3.14*ri*ri));
-                TxtB_Volumen.Text = Convert.ToString(((3.14 * ra * ra) - (3.14 * ri * ri))*rtr);
-                TxtB_Flächenträgheitsmoment.Text = Convert.ToString((3.14 * ((2 * ra / 1000) * (2 * ra / 1000) * (2 * ra / 1000) * (2 * ra / 1000)- (2 * ri / 1000) * (2 * ri / 1000) * (2 * ri / 1000) * (2 * ri / 1000))) / 64);
-                TxtB_Gewicht.Text = Convert.ToString((((3.14 * ra * ra) - (3.14 * ri * ri)) * rtr)*d/1000/1000);
-            }
-            //Rechteck Rohr
-            if (eins == 0 & zwei == 0 & drei > 0 & vier == 0)
-            {
-                //mit Radien
-                if (fünf > 0)
+                //Benutzerdefinierte Dichte
+                if (sechs > 0)
                 {
-                    TxtB_Querschnittsfläche.Text = Convert.ToString(r_ah * r_ab-(r_ah-z)*(r_ab-z));
-                    TxtB_Volumen.Text = Convert.ToString((r_ah * r_ab - (r_ah - z) * (r_ab - z))*qr_t);
-                    TxtB_Flächenträgheitsmoment.Text = Convert.ToString(((r_ab / 1000) * (r_ah / 1000) * (r_ah / 1000) * (r_ah / 1000) / 12) - (((r_ab - z) / 1000) * ((r_ah - z) / 1000) * ((r_ah - z) / 1000) * ((r_ah - z) / 1000) / 12));
-                    TxtB_Gewicht.Text = Convert.ToString(((r_ah * r_ab - (r_ah - z) * (r_ab - z)) * qr_t)*d/1000/1000);
+                    d = Convert.ToDouble(TxtB_Dichte.Text);
                 }
-                //ohne Radien
-                else
+                //Rechteck Vollprofil
+                if (eins > 0 & zwei == 0 & drei == 0 & vier == 0)
                 {
-                    TxtB_Querschnittsfläche.Text = Convert.ToString(r_ah * r_ab - (r_ah - z) * (r_ab - z));
-                    TxtB_Volumen.Text = Convert.ToString((r_ah * r_ab - (r_ah - z) * (r_ab - z)) * qr_t);
-                    TxtB_Flächenträgheitsmoment.Text = Convert.ToString(((r_ab / 1000) * (r_ah / 1000) * (r_ah / 1000) * (r_ah / 1000) / 12) - (((r_ab - z) / 1000) * ((r_ah - z) / 1000) * ((r_ah - z) / 1000) * ((r_ah - z) / 1000) / 12));
-                    TxtB_Gewicht.Text = Convert.ToString(((r_ah * r_ab - (r_ah - z) * (r_ab - z)) * qr_t) * d/1000/1000);
-                }           
+                    TxtB_Querschnittsfläche.Text = Convert.ToString(h * b);
+                    TxtB_Volumen.Text = Convert.ToString(h * b * t);
+                    TxtB_Flächenträgheitsmoment.Text = Convert.ToString((b / 1000) * (h / 1000) * (h / 1000) * (h / 1000) / 12);
+                    TxtB_Gewicht.Text = Convert.ToString((h * b * t) * d / 1000 / 1000);
+                }
+                //Kreis Vollprofil
+                if (eins == 0 & zwei > 0 & drei == 0 & vier == 0)
+                {
+                    TxtB_Querschnittsfläche.Text = Convert.ToString(3.14 * r * r);
+                    TxtB_Volumen.Text = Convert.ToString(3.14 * r * r * tr);
+                    TxtB_Flächenträgheitsmoment.Text = Convert.ToString(3.14 * (2 * r / 1000) * (2 * r / 1000) * (2 * r / 1000) * (2 * r / 1000) / 64);
+                    TxtB_Gewicht.Text = Convert.ToString((3.14 * r * r * tr) * d / 1000 / 1000);
+                }
+                //Kreis Rohr
+                if (eins == 0 & zwei == 0 & drei == 0 & vier > 0)
+                {
+                    TxtB_Querschnittsfläche.Text = Convert.ToString((3.14 * ra * ra) - (3.14 * ri * ri));
+                    TxtB_Volumen.Text = Convert.ToString(((3.14 * ra * ra) - (3.14 * ri * ri)) * rtr);
+                    TxtB_Flächenträgheitsmoment.Text = Convert.ToString((3.14 * ((2 * ra / 1000) * (2 * ra / 1000) * (2 * ra / 1000) * (2 * ra / 1000) - (2 * ri / 1000) * (2 * ri / 1000) * (2 * ri / 1000) * (2 * ri / 1000))) / 64);
+                    TxtB_Gewicht.Text = Convert.ToString((((3.14 * ra * ra) - (3.14 * ri * ri)) * rtr) * d / 1000 / 1000);
+                }
+                //Rechteck Rohr
+                if (eins == 0 & zwei == 0 & drei > 0 & vier == 0)
+                {
+                    //mit Radien
+                    if (fünf > 0)
+                    {
+                        TxtB_Querschnittsfläche.Text = Convert.ToString(r_ah * r_ab - (r_ah - z) * (r_ab - z));
+                        TxtB_Volumen.Text = Convert.ToString((r_ah * r_ab - (r_ah - z) * (r_ab - z)) * qr_t);
+                        TxtB_Flächenträgheitsmoment.Text = Convert.ToString(((r_ab / 1000) * (r_ah / 1000) * (r_ah / 1000) * (r_ah / 1000) / 12) - (((r_ab - z) / 1000) * ((r_ah - z) / 1000) * ((r_ah - z) / 1000) * ((r_ah - z) / 1000) / 12));
+                        TxtB_Gewicht.Text = Convert.ToString(((r_ah * r_ab - (r_ah - z) * (r_ab - z)) * qr_t) * d / 1000 / 1000);
+                    }
+                    //ohne Radien
+                    else
+                    {
+                        TxtB_Querschnittsfläche.Text = Convert.ToString(r_ah * r_ab - (r_ah - z) * (r_ab - z));
+                        TxtB_Volumen.Text = Convert.ToString((r_ah * r_ab - (r_ah - z) * (r_ab - z)) * qr_t);
+                        TxtB_Flächenträgheitsmoment.Text = Convert.ToString(((r_ab / 1000) * (r_ah / 1000) * (r_ah / 1000) * (r_ah / 1000) / 12) - (((r_ab - z) / 1000) * ((r_ah - z) / 1000) * ((r_ah - z) / 1000) * ((r_ah - z) / 1000) / 12));
+                        TxtB_Gewicht.Text = Convert.ToString(((r_ah * r_ab - (r_ah - z) * (r_ab - z)) * qr_t) * d / 1000 / 1000);
+                    }
+                }               
+            }
+            //Fehlermeldung negativer Wert
+            else
+            {
+                MessageBox.Show("Äußerer Wert nicht größer als innerer Wert! Wert kleiner Null!");
             }
         }
         //Funktionsaufruf Dichte
